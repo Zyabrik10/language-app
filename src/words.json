@@ -1,0 +1,1570 @@
+[
+  {
+    "id": "0",
+    "expression": "a ballpark figure",
+    "type": "phrase",
+    "translation": "орієнтовна цифра",
+    "description": "Приблизна оцінка кількості або суми"
+  },
+  {
+    "id": "1",
+    "expression": "a bit down",
+    "type": "phrase",
+    "translation": "трохи сумний",
+    "description": "Почуватися не дуже добре або трохи пригніченим"
+  },
+  {
+    "id": "2",
+    "expression": "a close-knit community",
+    "type": "noun_phrase",
+    "translation": "Згуртована громада",
+    "description": "Група людей, які тісно пов'язані між собою"
+  },
+  {
+    "id": "3",
+    "expression": "a free spirit",
+    "type": "noun_phrase",
+    "translation": "Вільна душа",
+    "description": "Людина, яка живе незалежно та не слідує звичним нормам"
+  },
+  {
+    "id": "4",
+    "expression": "a free-for-all",
+    "type": "noun",
+    "translation": "Безлад",
+    "description": "Ситуація без правил або контролю"
+  },
+  {
+    "id": "5",
+    "expression": "a gathering",
+    "type": "noun",
+    "translation": "Зустріч",
+    "description": "Коли люди збираються разом"
+  },
+  {
+    "id": "6",
+    "expression": "a helping hand",
+    "type": "noun_phrase",
+    "translation": "Допоміжна рука",
+    "description": "Допомога комусь"
+  },
+  {
+    "id": "7",
+    "expression": "a hostile",
+    "type": "noun",
+    "translation": "Ворожий",
+    "description": "Людина або група, що виявляє ворожість"
+  },
+  {
+    "id": "8",
+    "expression": "a long-standing immigrant community",
+    "type": "noun_phrase",
+    "translation": "Давня громада іммігрантів",
+    "description": "Спільнота іммігрантів, яка існує тривалий час"
+  },
+  {
+    "id": "9",
+    "expression": "a play on words",
+    "type": "phrase",
+    "translation": "гра слів",
+    "description": "Жарт, заснований на подвійному значенні слів"
+  },
+  {
+    "id": "10",
+    "expression": "a reality check",
+    "type": "noun_phrase",
+    "translation": "Перевірка реальністю",
+    "description": "Момент усвідомлення реального стану речей"
+  },
+  {
+    "id": "11",
+    "expression": "a rich heritage",
+    "type": "noun_phrase",
+    "translation": "Багата спадщина",
+    "description": "Культурні або історичні цінності, що передаються з покоління в покоління"
+  },
+  {
+    "id": "12",
+    "expression": "a sure path",
+    "type": "noun_phrase",
+    "translation": "Вірний шлях",
+    "description": "Гарантований спосіб досягнення чогось"
+  },
+  {
+    "id": "13",
+    "expression": "a tomb",
+    "type": "noun",
+    "translation": "Гробниця",
+    "description": "Місце поховання, часто монументальне"
+  },
+  {
+    "id": "14",
+    "expression": "a win-win situation",
+    "type": "noun_phrase",
+    "translation": "Ситуація виграш-виграш",
+    "description": "Ситуація, вигідна для всіх сторін"
+  },
+  {
+    "id": "15",
+    "expression": "beyond doubt",
+    "type": "phrase",
+    "translation": "без сумніву",
+    "description": "Точно, без жодних сумнівів"
+  },
+  {
+    "id": "16",
+    "expression": "beyond help",
+    "type": "phrase",
+    "translation": "поза межами допомоги",
+    "description": "Стан, коли вже нічого не можна зробити для поліпшення"
+  },
+  {
+    "id": "17",
+    "expression": "beyond me",
+    "type": "phrase",
+    "translation": "не для мого розуміння",
+    "description": "Щось, що я не можу зрозуміти"
+  },
+  {
+    "id": "18",
+    "expression": "beyond one",
+    "type": "phrase",
+    "translation": "поза чиїмось розумінням",
+    "description": "Надто складно для розуміння"
+  },
+  {
+    "id": "19",
+    "expression": "beyond recognition",
+    "type": "phrase",
+    "translation": "до невпізнання",
+    "description": "Дуже сильно змінився"
+  },
+  {
+    "id": "20",
+    "expression": "beyond the call of duty",
+    "type": "phrase",
+    "translation": "поза межами обов'язків",
+    "description": "Зробити більше, ніж очікується"
+  },
+  {
+    "id": "21",
+    "expression": "beyond the joke",
+    "type": "phrase",
+    "translation": "вже не смішно",
+    "description": "Ситуація, яка перестала бути жартівливою"
+  },
+  {
+    "id": "22",
+    "expression": "a bleak landscape",
+    "type": "noun_phrase",
+    "translation": "Похмурий пейзаж",
+    "description": "Непривітна, безрадісна місцевість"
+  },
+  {
+    "id": "23",
+    "expression": "bone dry",
+    "type": "adjective_phrase",
+    "translation": "абсолютно сухий",
+    "description": "Повністю позбавлений вологи"
+  },
+  {
+    "id": "24",
+    "expression": "brand new",
+    "type": "adjective_phrase",
+    "translation": "цілком новий",
+    "description": "Абсолютно новий, який не використовувався"
+  },
+  {
+    "id": "25",
+    "expression": "a cloudless sky",
+    "type": "noun_phrase",
+    "translation": "Безхмарне небо",
+    "description": "Небо без жодної хмаринки"
+  },
+  {
+    "id": "26",
+    "expression": "to come across as",
+    "type": "phrasal_verb",
+    "translation": "сприйматися як",
+    "description": "Виглядати певним чином в очах інших"
+  },
+  {
+    "id": "27",
+    "expression": "content",
+    "type": "adjective",
+    "translation": "задоволений",
+    "description": "Стан внутрішнього спокою та задоволення"
+  },
+  {
+    "id": "28",
+    "expression": "cross",
+    "type": "adjective",
+    "translation": "сердитий",
+    "description": "Почуття легкого роздратування"
+  },
+  {
+    "id": "29",
+    "expression": "a crystal clear water",
+    "type": "noun_phrase",
+    "translation": "Кришталево чиста вода",
+    "description": "Дуже прозора, чиста вода"
+  },
+  {
+    "id": "30",
+    "expression": "culturally rich",
+    "type": "adjective_phrase",
+    "translation": "культурно багатий",
+    "description": "Має багату культурну спадщину"
+  },
+  {
+    "id": "31",
+    "expression": "a deep-rooted values",
+    "type": "noun_phrase",
+    "translation": "Глибоко вкорінені цінності",
+    "description": "Цінності, що міцно закріпилися"
+  },
+  {
+    "id": "32",
+    "expression": "to deliberate",
+    "type": "verb",
+    "translation": "довго та ретельно обмірковувати",
+    "description": "Довго та ретельно обмірковувати"
+  },
+  {
+    "id": "33",
+    "expression": "despondent",
+    "type": "adjective",
+    "translation": "пригнічений",
+    "description": "Втративший надію, у відчаї"
+  },
+  {
+    "id": "34",
+    "expression": "to doze",
+    "type": "verb",
+    "translation": "дрімати",
+    "description": "Легко спати або бути напівсонним"
+  },
+  {
+    "id": "35",
+    "expression": "ecstatic",
+    "type": "adjective",
+    "translation": "у захваті",
+    "description": "Дуже щасливий або збуджений"
+  },
+  {
+    "id": "36",
+    "expression": "an emigrants",
+    "type": "noun",
+    "translation": "Емігранти",
+    "description": "Люди, які виїхали зі своєї країни"
+  },
+  {
+    "id": "37",
+    "expression": "environmentally friendly",
+    "type": "adjective_phrase",
+    "translation": "екологічно чистий",
+    "description": "Безпечний для навколишнього середовища"
+  },
+  {
+    "id": "38",
+    "expression": "ethnically diverse",
+    "type": "adjective_phrase",
+    "translation": "етнічно різноманітний",
+    "description": "Містить представників різних етнічних груп"
+  },
+  {
+    "id": "39",
+    "expression": "an extended family",
+    "type": "noun_phrase",
+    "translation": "Велика сім'я",
+    "description": "Сім'я, що включає кілька поколінь або родичів"
+  },
+  {
+    "id": "40",
+    "expression": "fast asleep",
+    "type": "adjective_phrase",
+    "translation": "міцно спить",
+    "description": "Дуже глибокий сон"
+  },
+  {
+    "id": "41",
+    "expression": "feel free",
+    "type": "phrase",
+    "translation": "почувайтеся вільно",
+    "description": "Дозвіл робити щось без обмежень"
+  },
+  {
+    "id": "42",
+    "expression": "a first-generation migrants",
+    "type": "noun_phrase",
+    "translation": "Мігранти першого покоління",
+    "description": "Люди, які першими переїхали в іншу країну"
+  },
+  {
+    "id": "43",
+    "expression": "a footage",
+    "type": "noun",
+    "translation": "Кадри",
+    "description": "Записане відео або кіноматеріал"
+  },
+  {
+    "id": "44",
+    "expression": "freezing cold",
+    "type": "adjective_phrase",
+    "translation": "морозно холодно",
+    "description": "Дуже низька температура"
+  },
+  {
+    "id": "45",
+    "expression": "a free hand",
+    "type": "noun_phrase",
+    "translation": "Повна свобода дій",
+    "description": "Можливість діяти без обмежень"
+  },
+  {
+    "id": "46",
+    "expression": "geographically remote",
+    "type": "adjective_phrase",
+    "translation": "географічно віддалений",
+    "description": "Знаходиться далеко від цивілізації"
+  },
+  {
+    "id": "47",
+    "expression": "to get a move on",
+    "type": "phrasal_verb",
+    "translation": "поспішати",
+    "description": "Почати рухатися швидше"
+  },
+  {
+    "id": "48",
+    "expression": "to get off scot-free",
+    "type": "phrasal_verb",
+    "translation": "уникнути покарання",
+    "description": "Не понести відповідальності за провину"
+  },
+  {
+    "id": "49",
+    "expression": "hot under the collar",
+    "type": "adjective_phrase",
+    "translation": "розлючений",
+    "description": "Дуже злий або роздратований"
+  },
+  {
+    "id": "50",
+    "expression": "an immigrants",
+    "type": "noun",
+    "translation": "Іммігранти",
+    "description": "Люди, які приїхали жити в іншу країну"
+  },
+  {
+    "id": "51",
+    "expression": "in a friendly way",
+    "type": "adverbial_phrase",
+    "translation": "по-дружньому",
+    "description": "Дружня манера поведінки"
+  },
+  {
+    "id": "52",
+    "expression": "in the loop",
+    "type": "phrase",
+    "translation": "в курсі справ",
+    "description": "Бути інформованим про події"
+  },
+  {
+    "id": "53",
+    "expression": "industrially advanced",
+    "type": "adjective_phrase",
+    "translation": "промислово розвинений",
+    "description": "Має високорозвинену промисловість"
+  },
+  {
+    "id": "54",
+    "expression": "an initiation",
+    "type": "noun",
+    "translation": "Ініціація",
+    "description": "Процес введення в якусь діяльність чи організацію"
+  },
+  {
+    "id": "55",
+    "expression": "internationally famous",
+    "type": "adjective_phrase",
+    "translation": "відомий на міжнародному рівні",
+    "description": "Відомий у всьому світі"
+  },
+  {
+    "id": "56",
+    "expression": "to lend a hand",
+    "type": "phrasal_verb",
+    "translation": "подати руку допомоги",
+    "description": "Допомогти комусь"
+  },
+  {
+    "id": "57",
+    "expression": "a lightning reaction",
+    "type": "noun_phrase",
+    "translation": "Блискавична реакція",
+    "description": "Дуже швидка відповідь на щось"
+  },
+  {
+    "id": "58",
+    "expression": "a lush vegetation",
+    "type": "noun_phrase",
+    "translation": "Буйна рослинність",
+    "description": "Густа, багата рослинність"
+  },
+  {
+    "id": "59",
+    "expression": "a lush valleys",
+    "type": "noun_phrase",
+    "translation": "Багаті долини",
+    "description": "Родючі, зелені долини"
+  },
+  {
+    "id": "60",
+    "expression": "to move around",
+    "type": "phrasal_verb",
+    "translation": "пересуватися",
+    "description": "Рухатися з місця на місце"
+  },
+  {
+    "id": "61",
+    "expression": "to move off",
+    "type": "phrasal_verb",
+    "translation": "від'їжджати",
+    "description": "Починати рух (про транспорт)"
+  },
+  {
+    "id": "62",
+    "expression": "musically gifted",
+    "type": "adjective_phrase",
+    "translation": "музично обдарований",
+    "description": "Має природній музичний талант"
+  },
+  {
+    "id": "63",
+    "expression": "no such thing as a free lunch",
+    "type": "proverb",
+    "translation": "безкоштовних обідів не буває",
+    "description": "Усьо в цьому світі має свою ціну"
+  },
+  {
+    "id": "64",
+    "expression": "not rocket science",
+    "type": "phrase",
+    "translation": "не найскладніше",
+    "description": "Щось легке для розуміння"
+  },
+  {
+    "id": "65",
+    "expression": "on edge",
+    "type": "adjective_phrase",
+    "translation": "напружений",
+    "description": "Почуття тривоги або нервозності"
+  },
+  {
+    "id": "66",
+    "expression": "on the same page",
+    "type": "phrase",
+    "translation": "на одній хвилі",
+    "description": "Мати спільне розуміння ситуації"
+  },
+  {
+    "id": "67",
+    "expression": "petrified",
+    "type": "adjective",
+    "translation": "переляканий",
+    "description": "Дуже наляканий, застиглий від страху"
+  },
+  {
+    "id": "68",
+    "expression": "pitch black",
+    "type": "adjective_phrase",
+    "translation": "темний як смола",
+    "description": "Дуже темний, без світла"
+  },
+  {
+    "id": "69",
+    "expression": "pitch dark",
+    "type": "adjective_phrase",
+    "translation": "темний як смола",
+    "description": "Повна темрява"
+  },
+  {
+    "id": "70",
+    "expression": "politically active",
+    "type": "adjective_phrase",
+    "translation": "політично активний",
+    "description": "Бере участь у політичній діяльності"
+  },
+  {
+    "id": "71",
+    "expression": "rock hard",
+    "type": "adjective_phrase",
+    "translation": "твердий як камінь",
+    "description": "Дуже твердий"
+  },
+  {
+    "id": "72",
+    "expression": "a rugged coastline",
+    "type": "noun_phrase",
+    "translation": "Пересічне узбережжя",
+    "description": "Узбережжя з крутими скелями"
+  },
+  {
+    "id": "73",
+    "expression": "a rugged terrain",
+    "type": "noun_phrase",
+    "translation": "Пересічна місцевість",
+    "description": "Складна для пересування місцевість"
+  },
+  {
+    "id": "74",
+    "expression": "to be scared stiff",
+    "type": "adjective_phrase",
+    "translation": "переляканий до смерті",
+    "description": "Дуже наляканий"
+  },
+  {
+    "id": "75",
+    "expression": "a snow-capped mountains",
+    "type": "noun_phrase",
+    "translation": "Засніжені гори",
+    "description": "Гори, покриті снігом"
+  },
+  {
+    "id": "76",
+    "expression": "a social gathering",
+    "type": "noun_phrase",
+    "translation": "Товариські збори",
+    "description": "Неформальні зустрічі людей"
+  },
+  {
+    "id": "77",
+    "expression": "a sparse vegetation",
+    "type": "noun_phrase",
+    "translation": "Рідкісна рослинність",
+    "description": "Негуста рослинність"
+  },
+  {
+    "id": "78",
+    "expression": "speechless",
+    "type": "adjective",
+    "translation": "німий",
+    "description": "Нездатний говорити від сильних емоцій"
+  },
+  {
+    "id": "79",
+    "expression": "stone cold",
+    "type": "adjective_phrase",
+    "translation": "холодний як камінь",
+    "description": "Дуже холодний"
+  },
+  {
+    "id": "80",
+    "expression": "taken aback",
+    "type": "adjective_phrase",
+    "translation": "здивований",
+    "description": "Раптово здивований чимось"
+  },
+  {
+    "id": "81",
+    "expression": "the belief",
+    "type": "noun_phrase",
+    "translation": "Переконання",
+    "description": "Щось, у що людина вірить"
+  },
+  {
+    "id": "82",
+    "expression": "the constitution",
+    "type": "noun",
+    "translation": "Конституція",
+    "description": "Основний закон країни"
+  },
+  {
+    "id": "83",
+    "expression": "the funny side",
+    "type": "noun_phrase",
+    "translation": "Смішна сторона",
+    "description": "Жартівливий аспект чогось"
+  },
+  {
+    "id": "84",
+    "expression": "the heritage",
+    "type": "noun",
+    "translation": "Спадщина",
+    "description": "Культурні цінності, що передаються"
+  },
+  {
+    "id": "85",
+    "expression": "the inclusion/exclusion",
+    "type": "noun_phrase",
+    "translation": "Включення/виключення",
+    "description": "Процес додавання або вилучення"
+  },
+  {
+    "id": "86",
+    "expression": "the loop",
+    "type": "noun_phrase",
+    "translation": "Інформаційний цикл",
+    "description": "Поточний стан справ"
+  },
+  {
+    "id": "87",
+    "expression": "the premise",
+    "type": "noun",
+    "translation": "Передумова",
+    "description": "Основа для міркувань"
+  },
+  {
+    "id": "88",
+    "expression": "the resistance to disease",
+    "type": "noun_phrase",
+    "translation": "Стійкість до хвороб",
+    "description": "Здатність організму протистояти хворобам"
+  },
+  {
+    "id": "89",
+    "expression": "the tuber",
+    "type": "noun",
+    "translation": "Бульба",
+    "description": "Їстівна частина стебла рослини"
+  },
+  {
+    "id": "90",
+    "expression": "wide open",
+    "type": "adjective_phrase",
+    "translation": "широко відкритий",
+    "description": "Повністю відкритий"
+  },
+  {
+    "id": "91",
+    "expression": "a wooded hillsides",
+    "type": "noun_phrase",
+    "translation": "Лісисті схили",
+    "description": "Схили, покриті лісом"
+  },
+  {
+    "id": "92",
+    "expression": "worried sick",
+    "type": "adjective_phrase",
+    "translation": "стурбований до смерті",
+    "description": "Дуже стурбований"
+  },
+  {
+    "id": "93",
+    "expression": "to articulate",
+    "type": "verb",
+    "translation": "чітко висловлювати",
+    "description": "Ясно формулювати думки"
+  },
+  {
+    "id": "94",
+    "expression": "to be astonished",
+    "type": "verb_phrase",
+    "translation": "бути враженим",
+    "description": "Дуже здивуватися"
+  },
+  {
+    "id": "95",
+    "expression": "to be beyond somebody",
+    "type": "verb_phrase",
+    "translation": "бути поза чиїмось розумінням",
+    "description": "Бути занадто складним для розуміння"
+  },
+  {
+    "id": "96",
+    "expression": "to be buried",
+    "type": "verb_phrase",
+    "translation": "бути похованим",
+    "description": "Лежати під землею після смерті"
+  },
+  {
+    "id": "97",
+    "expression": "to be cross",
+    "type": "verb_phrase",
+    "translation": "бути сердитим",
+    "description": "Почуватися роздратованим"
+  },
+  {
+    "id": "98",
+    "expression": "to be done in",
+    "type": "verb_phrase",
+    "translation": "бути виснаженим",
+    "description": "Дуже втомленим"
+  },
+  {
+    "id": "99",
+    "expression": "to be livid",
+    "type": "verb_phrase",
+    "translation": "бути лютим",
+    "description": "Дуже сильно злитися"
+  },
+  {
+    "id": "100",
+    "expression": "to be miserable",
+    "type": "verb_phrase",
+    "translation": "бути нещасним",
+    "description": "Почуватися дуже погано"
+  },
+  {
+    "id": "101",
+    "expression": "to be petrified",
+    "type": "verb_phrase",
+    "translation": "бути переляканим",
+    "description": "Дуже сильно налякатися"
+  },
+  {
+    "id": "102",
+    "expression": "to be preoccupied",
+    "type": "verb_phrase",
+    "translation": "бути зайнятим думками",
+    "description": "Думати про щось постійно"
+  },
+  {
+    "id": "103",
+    "expression": "to be speechless",
+    "type": "verb_phrase",
+    "translation": "бути німим",
+    "description": "Не мати слів від сильних емоцій"
+  },
+  {
+    "id": "104",
+    "expression": "to be thrilled",
+    "type": "verb_phrase",
+    "translation": "бути в захваті",
+    "description": "Дуже радіти чомусь"
+  },
+  {
+    "id": "105",
+    "expression": "to be ubiquitous",
+    "type": "verb_phrase",
+    "translation": "бути всюдисущим",
+    "description": "Бути присутнім скрізь"
+  },
+  {
+    "id": "106",
+    "expression": "to break down barriers",
+    "type": "verb_phrase",
+    "translation": "зруйнувати бар'єри",
+    "description": "Усунути перешкоди"
+  },
+  {
+    "id": "107",
+    "expression": "to break even",
+    "type": "verb_phrase",
+    "translation": "вийти в нуль",
+    "description": "Не отримати прибутку, але й не зазнати збитків"
+  },
+  {
+    "id": "108",
+    "expression": "to break the back of",
+    "type": "verb_phrase",
+    "translation": "виконати найважчу частину",
+    "description": "Завершити найскладніший етап роботи"
+  },
+  {
+    "id": "109",
+    "expression": "to break the bank",
+    "type": "verb_phrase",
+    "translation": "розоритися",
+    "description": "Витратити всі гроші"
+  },
+  {
+    "id": "110",
+    "expression": "to break the habit",
+    "type": "verb_phrase",
+    "translation": "позбутися звички",
+    "description": "Перестати робити щось регулярно"
+  },
+  {
+    "id": "111",
+    "expression": "to break the ice",
+    "type": "verb_phrase",
+    "translation": "розламати лід",
+    "description": "Створити більш розслаблену атмосферу"
+  },
+  {
+    "id": "112",
+    "expression": "to bump into",
+    "type": "phrasal_verb",
+    "translation": "натрапити на",
+    "description": "Зустріти когось випадково"
+  },
+  {
+    "id": "113",
+    "expression": "to cavort",
+    "type": "verb",
+    "translation": "скакати",
+    "description": "Радісно стрибати або танцювати"
+  },
+  {
+    "id": "114",
+    "expression": "to come at a price",
+    "type": "verb_phrase",
+    "translation": "мати свою ціну",
+    "description": "Вимагати певних жертв або витрат"
+  },
+  {
+    "id": "115",
+    "expression": "to concern",
+    "type": "verb",
+    "translation": "турбувати",
+    "description": "Викликати занепокоєння"
+  },
+  {
+    "id": "116",
+    "expression": "to derive",
+    "type": "verb",
+    "translation": "отримувати",
+    "description": "Виводити щось з чогось"
+  },
+  {
+    "id": "117",
+    "expression": "to douse the flame",
+    "type": "verb_phrase",
+    "translation": "загасити полум'я",
+    "description": "Припинити горіння"
+  },
+  {
+    "id": "118",
+    "expression": "to do your bit",
+    "type": "verb_phrase",
+    "translation": "зробити свою частину",
+    "description": "Внести свій внесок"
+  },
+  {
+    "id": "119",
+    "expression": "to duplicate",
+    "type": "verb",
+    "translation": "дублювати",
+    "description": "Створювати копію"
+  },
+  {
+    "id": "120",
+    "expression": "to elaborate",
+    "type": "verb",
+    "translation": "розвивати думку",
+    "description": "Детально пояснювати"
+  },
+  {
+    "id": "121",
+    "expression": "to emanate",
+    "type": "verb",
+    "translation": "випромінювати",
+    "description": "Походити від чогось"
+  },
+  {
+    "id": "122",
+    "expression": "to feel down",
+    "type": "verb_phrase",
+    "translation": "почуватися пригніченим",
+    "description": "Мати поганий настрій"
+  },
+  {
+    "id": "123",
+    "expression": "to feel free",
+    "type": "verb_phrase",
+    "translation": "почуватися вільно",
+    "description": "Мати можливість робити щось без обмежень"
+  },
+  {
+    "id": "124",
+    "expression": "to get away with",
+    "type": "phrasal_verb",
+    "translation": "уникнути покарання",
+    "description": "Не понести наслідків за щось"
+  },
+  {
+    "id": "125",
+    "expression": "to get off scot-free",
+    "type": "phrasal_verb",
+    "translation": "уникнути покарання",
+    "description": "Не бути покараним за провину"
+  },
+  {
+    "id": "126",
+    "expression": "to give a helping hand",
+    "type": "verb_phrase",
+    "translation": "подати руку допомоги",
+    "description": "Допомогти комусь"
+  },
+  {
+    "id": "127",
+    "expression": "to go beyond a joke",
+    "type": "verb_phrase",
+    "translation": "вийти за межі жартів",
+    "description": "Стати серйозною проблемою"
+  },
+  {
+    "id": "128",
+    "expression": "to have a laugh about",
+    "type": "verb_phrase",
+    "translation": "посміятися з",
+    "description": "Жартувати про щось"
+  },
+  {
+    "id": "129",
+    "expression": "to have a say",
+    "type": "verb_phrase",
+    "translation": "мати право голосу",
+    "description": "Мати можливість висловити думку"
+  },
+  {
+    "id": "130",
+    "expression": "to illuminate",
+    "type": "verb",
+    "translation": "освітлювати",
+    "description": "Надавати світло або ясність"
+  },
+  {
+    "id": "131",
+    "expression": "to infuse",
+    "type": "verb",
+    "translation": "настоювати",
+    "description": "Додавати якості чомусь"
+  },
+  {
+    "id": "132",
+    "expression": "to lock someone out of",
+    "type": "phrasal_verb",
+    "translation": "заблокувати комусь доступ до",
+    "description": "Не дати комусь увійти або отримати доступ"
+  },
+  {
+    "id": "133",
+    "expression": "to look livid/furious",
+    "type": "verb_phrase",
+    "translation": "виглядати лютим",
+    "description": "Дуже сердито виглядати"
+  },
+  {
+    "id": "134",
+    "expression": "to make a joke",
+    "type": "verb_phrase",
+    "translation": "жартувати",
+    "description": "Казати щось смішне"
+  },
+  {
+    "id": "135",
+    "expression": "to move to tears",
+    "type": "phrasal_verb",
+    "translation": "змусити плакати",
+    "description": "Викликати сильні емоції"
+  },
+  {
+    "id": "136",
+    "expression": "to play a joke on",
+    "type": "verb_phrase",
+    "translation": "розіграти когось",
+    "description": "Зробити жарт над кимось"
+  },
+  {
+    "id": "137",
+    "expression": "to play on words",
+    "type": "verb_phrase",
+    "translation": "грати словами",
+    "description": "Використовувати гру слів"
+  },
+  {
+    "id": "138",
+    "expression": "to pull someone together",
+    "type": "phrasal_verb",
+    "translation": "згуртувати когось",
+    "description": "Допомогти комусь зібратися"
+  },
+  {
+    "id": "139",
+    "expression": "to push the boundaries",
+    "type": "verb_phrase",
+    "translation": "розширювати межі",
+    "description": "Виходити за звичні рамки"
+  },
+  {
+    "id": "140",
+    "expression": "to see the funny side of",
+    "type": "verb_phrase",
+    "translation": "побачити смішну сторону",
+    "description": "Знайти щось смішне в ситуації"
+  },
+  {
+    "id": "141",
+    "expression": "to separate",
+    "type": "verb",
+    "translation": "відділяти",
+    "description": "Розділяти на частини"
+  },
+  {
+    "id": "142",
+    "expression": "to show concern for",
+    "type": "verb_phrase",
+    "translation": "виявляти турботу про",
+    "description": "Демонструвати піклування"
+  },
+  {
+    "id": "143",
+    "expression": "to take fun out of",
+    "type": "verb_phrase",
+    "translation": "позбавити задоволення",
+    "description": "Зробити щось менш приємним"
+  },
+  {
+    "id": "144",
+    "expression": "to take responsibility",
+    "type": "verb_phrase",
+    "translation": "брати відповідальність",
+    "description": "Усвідомлювати свої обов'язки"
+  },
+  {
+    "id": "145",
+    "expression": "to think outside the box",
+    "type": "verb_phrase",
+    "translation": "думати нестандартно",
+    "description": "Шукати незвичні рішення"
+  },
+  {
+    "id": "146",
+    "expression": "accordingly",
+    "type": "adverb",
+    "translation": "відповідно",
+    "description": "У відповідний спосіб"
+  },
+  {
+    "id": "147",
+    "expression": "additionally",
+    "type": "adverb",
+    "translation": "додатково",
+    "description": "Крім того"
+  },
+  {
+    "id": "148",
+    "expression": "after all",
+    "type": "adverb",
+    "translation": "врешті-решт",
+    "description": "Враховуючи всі обставини"
+  },
+  {
+    "id": "149",
+    "expression": "as a result",
+    "type": "adverb",
+    "translation": "в результаті",
+    "description": "Викликаний чимось"
+  },
+  {
+    "id": "150",
+    "expression": "at least",
+    "type": "adverb",
+    "translation": "принаймні",
+    "description": "Мінімум"
+  },
+  {
+    "id": "151",
+    "expression": "anyway",
+    "type": "adverb",
+    "translation": "у будь-якому разі",
+    "description": "Використовується для підкреслення чи переходу до іншої теми"
+  },
+  {
+    "id": "152",
+    "expression": "besides",
+    "type": "adverb",
+    "translation": "крім того",
+    "description": "Додаткова інформація чи факт"
+  },
+  {
+    "id": "153",
+    "expression": "certainly",
+    "type": "adverb",
+    "translation": "безумовно",
+    "description": "Без жодних сумнівів"
+  },
+  {
+    "id": "154",
+    "expression": "conversely",
+    "type": "adverb",
+    "translation": "навпаки",
+    "description": "Протилежна точка зору"
+  },
+  {
+    "id": "155",
+    "expression": "finally",
+    "type": "adverb",
+    "translation": "нарешті",
+    "description": "В кінці процесу"
+  },
+  {
+    "id": "156",
+    "expression": "hence",
+    "type": "adverb",
+    "translation": "отже",
+    "description": "Використовується для позначення висновку"
+  },
+  {
+    "id": "157",
+    "expression": "instead",
+    "type": "adverb",
+    "translation": "замість",
+    "description": "Як альтернатива"
+  },
+  {
+    "id": "158",
+    "expression": "in conclusion",
+    "type": "adverb",
+    "translation": "на закінчення",
+    "description": "Використовується для підведення підсумків"
+  },
+  {
+    "id": "159",
+    "expression": "lately",
+    "type": "adverb",
+    "translation": "останнім часом",
+    "description": "В недавній перспективі"
+  },
+  {
+    "id": "160",
+    "expression": "likewise",
+    "type": "adverb",
+    "translation": "так само",
+    "description": "Таким же чином"
+  },
+  {
+    "id": "161",
+    "expression": "moreover",
+    "type": "adverb",
+    "translation": "більш того",
+    "description": "Додаткова важлива інформація"
+  },
+  {
+    "id": "162",
+    "expression": "namely",
+    "type": "adverb",
+    "translation": "а саме",
+    "description": "Для уточнення"
+  },
+  {
+    "id": "163",
+    "expression": "nevertheless",
+    "type": "adverb",
+    "translation": "тим не менш",
+    "description": "Незважаючи на щось"
+  },
+  {
+    "id": "164",
+    "expression": "yet",
+    "type": "adverb",
+    "translation": "ще",
+    "description": "До цього часу"
+  },
+  {
+    "id": "165",
+    "expression": "often",
+    "type": "adverb",
+    "translation": "часто",
+    "description": "Багато разів"
+  },
+  {
+    "id": "166",
+    "expression": "sometimes",
+    "type": "adverb",
+    "translation": "іноді",
+    "description": "В окремих випадках"
+  },
+  {
+    "id": "167",
+    "expression": "rarely",
+    "type": "adverb",
+    "translation": "рідко",
+    "description": "Не часто"
+  },
+  {
+    "id": "168",
+    "expression": "never",
+    "type": "adverb",
+    "translation": "ніколи",
+    "description": "Жодного разу"
+  },
+  {
+    "id": "169",
+    "expression": "ever",
+    "type": "adverb",
+    "translation": "коли-небудь",
+    "description": "У будь-який час"
+  },
+  {
+    "id": "170",
+    "expression": "hardly ever",
+    "type": "adverb",
+    "translation": "майже ніколи",
+    "description": "Дуже рідко"
+  },
+  {
+    "id": "171",
+    "expression": "occasionally",
+    "type": "adverb",
+    "translation": "час від часу",
+    "description": "Нерегулярно"
+  },
+  {
+    "id": "172",
+    "expression": "seldom",
+    "type": "adverb",
+    "translation": "рідко",
+    "description": "Не часто"
+  },
+  {
+    "id": "173",
+    "expression": "generally",
+    "type": "adverb",
+    "translation": "загалом",
+    "description": "В більшості випадків"
+  },
+  {
+    "id": "174",
+    "expression": "frequently",
+    "type": "adverb",
+    "translation": "часто",
+    "description": "Багато разів"
+  },
+  {
+    "id": "175",
+    "expression": "normally",
+    "type": "adverb",
+    "translation": "зазвичай",
+    "description": "У звичайних обставинах"
+  },
+  {
+    "id": "176",
+    "expression": "daily",
+    "type": "adverb",
+    "translation": "щодня",
+    "description": "Кожного дня"
+  },
+  {
+    "id": "177",
+    "expression": "previously",
+    "type": "adverb",
+    "translation": "раніше",
+    "description": "До цього часу"
+  },
+  {
+    "id": "178",
+    "expression": "afterwards",
+    "type": "adverb",
+    "translation": "після цього",
+    "description": "Пізніше"
+  },
+  {
+    "id": "179",
+    "expression": "early",
+    "type": "adverb",
+    "translation": "рано",
+    "description": "До звичайного часу"
+  },
+  {
+    "id": "180",
+    "expression": "late",
+    "type": "adverb",
+    "translation": "пізно",
+    "description": "Після звичайного часу"
+  },
+  {
+    "id": "181",
+    "expression": "later",
+    "type": "adverb",
+    "translation": "пізніше",
+    "description": "В майбутньому"
+  },
+  {
+    "id": "182",
+    "expression": "still",
+    "type": "adverb",
+    "translation": "досі",
+    "description": "Продовжує бути правдою"
+  },
+  {
+    "id": "183",
+    "expression": "seldom",
+    "type": "adverb",
+    "translation": "рідко",
+    "description": "Не часто"
+  },
+  {
+    "id": "184",
+    "expression": "straight",
+    "type": "adverb",
+    "translation": "прямо",
+    "description": "Без вигинів"
+  },
+  {
+    "id": "185",
+    "expression": "loudly",
+    "type": "adverb",
+    "translation": "гучно",
+    "description": "З великим звуком"
+  },
+  {
+    "id": "186",
+    "expression": "proudly",
+    "type": "adverb",
+    "translation": "гордо",
+    "description": "З почуттям гордості"
+  },
+  {
+    "id": "187",
+    "expression": "suspiciously",
+    "type": "adverb",
+    "translation": "підозріло",
+    "description": "Викликаючи підозри"
+  },
+  {
+    "id": "188",
+    "expression": "strangely",
+    "type": "adverb",
+    "translation": "дивно",
+    "description": "Незвичайним чином"
+  },
+  {
+    "id": "189",
+    "expression": "kindly",
+    "type": "adverb",
+    "translation": "доброзичливо",
+    "description": "По-доброму"
+  },
+  {
+    "id": "190",
+    "expression": "rudely",
+    "type": "adverb",
+    "translation": "грубо",
+    "description": "Неввічливо"
+  },
+  {
+    "id": "191",
+    "expression": "neatly",
+    "type": "adverb",
+    "translation": "акуратно",
+    "description": "Охайно"
+  },
+  {
+    "id": "192",
+    "expression": "generously",
+    "type": "adverb",
+    "translation": "щедро",
+    "description": "У великій кількості"
+  },
+  {
+    "id": "193",
+    "expression": "eagerly",
+    "type": "adverb",
+    "translation": "із задоволенням",
+    "description": "З великим бажанням"
+  },
+  {
+    "id": "194",
+    "expression": "accidentally",
+    "type": "adverb",
+    "translation": "випадково",
+    "description": "Без наміру"
+  },
+  {
+    "id": "195",
+    "expression": "rapidly",
+    "type": "adverb",
+    "translation": "швидко",
+    "description": "З високою швидкістю"
+  },
+  {
+    "id": "196",
+    "expression": "hungrily",
+    "type": "adverb",
+    "translation": "голодно",
+    "description": "Як голодна людина"
+  },
+  {
+    "id": "197",
+    "expression": "foolishly",
+    "type": "adverb",
+    "translation": "дурнувато",
+    "description": "діяти нерозумно або бездумно"
+  },
+  {
+    "id": "198",
+    "expression": "cheerfully",
+    "type": "adverb",
+    "translation": "весело",
+    "description": "з веселим або життєрадісним настроєм"
+  },
+  {
+    "id": "199",
+    "expression": "somewhat",
+    "type": "adverb",
+    "translation": "дещо",
+    "description": "у певній мірі або частково"
+  },
+  {
+    "id": "200",
+    "expression": "barely",
+    "type": "adverb",
+    "translation": "ледве",
+    "description": "майже зовсім не; ледве"
+  },
+  {
+    "id": "201",
+    "expression": "nearly",
+    "type": "adverb",
+    "translation": "майже",
+    "description": "дуже близько до чогось, але не зовсім"
+  },
+  {
+    "id": "202",
+    "expression": "extremely",
+    "type": "adverb",
+    "translation": "надзвичайно",
+    "description": "у надзвичайній мірі"
+  },
+  {
+    "id": "203",
+    "expression": "slightly",
+    "type": "adverb",
+    "translation": "трохи",
+    "description": "у невеликій мірі"
+  },
+  {
+    "id": "204",
+    "expression": "especially",
+    "type": "adverb",
+    "translation": "особливо",
+    "description": "більше, ніж зазвичай або ніж інші"
+  },
+  {
+    "id": "205",
+    "expression": "scarcely",
+    "type": "adverb",
+    "translation": "ледве",
+    "description": "ледве чи майже ні"
+  },
+  {
+    "id": "206",
+    "expression": "virtually",
+    "type": "adverb",
+    "translation": "фактично",
+    "description": "практично або майже повністю"
+  },
+  {
+    "id": "207",
+    "expression": "fully",
+    "type": "adverb",
+    "translation": "повністю",
+    "description": "повністю, цілком"
+  },
+  {
+    "id": "208",
+    "expression": "exceptionally",
+    "type": "adverb",
+    "translation": "винятково",
+    "description": "незвично або надзвичайно"
+  },
+  {
+    "id": "209",
+    "expression": "above",
+    "type": "adverb",
+    "translation": "вище",
+    "description": "на вищому рівні або місці"
+  },
+  {
+    "id": "210",
+    "expression": "nearby",
+    "type": "adverb",
+    "translation": "поруч",
+    "description": "розташований неподалік"
+  },
+  {
+    "id": "211",
+    "expression": "backward(s)",
+    "type": "adverb",
+    "translation": "назад",
+    "description": "у зворотному напрямку"
+  },
+  {
+    "id": "212",
+    "expression": "toward(s)",
+    "type": "adverb",
+    "translation": "у напрямку",
+    "description": "у напрямку чогось"
+  },
+  {
+    "id": "213",
+    "expression": "around",
+    "type": "adverb",
+    "translation": "навколо",
+    "description": "у колі або навколо чогось"
+  },
+  {
+    "id": "214",
+    "expression": "over",
+    "type": "adverb",
+    "translation": "над",
+    "description": "зверху або над чимось"
+  },
+  {
+    "id": "215",
+    "expression": "overseas",
+    "type": "adverb",
+    "translation": "за кордоном",
+    "description": "за межами морів; за кордоном"
+  },
+  {
+    "id": "216",
+    "expression": "away",
+    "type": "adverb",
+    "translation": "геть",
+    "description": "на відстані або в іншому місці"
+  },
+  {
+    "id": "217",
+    "expression": "upstairs",
+    "type": "adverb",
+    "translation": "нагорі",
+    "description": "на верхньому поверсі"
+  },
+  {
+    "id": "218",
+    "expression": "downstairs",
+    "type": "adverb",
+    "translation": "внизу",
+    "description": "на нижньому поверсі"
+  },
+  {
+    "id": "219",
+    "expression": "deeply",
+    "type": "adverb",
+    "translation": "глибоко",
+    "description": "дуже сильно або інтенсивно"
+  },
+  {
+    "id": "220",
+    "expression": "next-door",
+    "type": "adverb",
+    "translation": "поряд",
+    "description": "у сусідньому місці або будинку"
+  },
+  {
+    "id": "221",
+    "expression": "along with",
+    "type": "phrase",
+    "translation": "разом із",
+    "description": "разом з кимось або чимось"
+  },
+  {
+    "id": "222",
+    "expression": "to train",
+    "type": "verb",
+    "translation": "",
+    "description": "Немає опису"
+  },
+  {
+    "id": "223",
+    "expression": "since",
+    "type": "conjunction",
+    "translation": "тому що, по причинні, for the reason that, because",
+    "description": "тому що; через те що"
+  }
+]

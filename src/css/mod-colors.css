@@ -1,0 +1,27 @@
+.verb {
+  color: rgb(190, 0, 0);
+}
+
+.noun {
+  color: rgb(177, 65, 0);
+}
+
+.adjective {
+  color: #b2a300;
+}
+
+.adverb {
+  color: #00ab11;
+}
+
+.phrase {
+  color: #00b899;
+}
+
+.phrasal {
+  color: #0012b8;
+}
+
+.conjunction {
+  color: #b800b8;
+}

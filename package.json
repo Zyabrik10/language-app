@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "description": "The learning English app",
+  "author": "Zyabrik10",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build src/index.html --public-url ./",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "parcel": "^2.14.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
