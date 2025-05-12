@@ -10,11 +10,38 @@
     <div class="modal">
       <div class="container modal-container">
         <div class="modal-content"></div>
-        <button class="modal-add-btn app-button">Add</button>
+        <button class="modal-add-btn app-button">Add to Favorite</button>
         <button class="modal-close-btn app-button">Close</button>
       </div>
     </div>
     <div class="container">
+      <div class="sub-container">
+        <ul class="lang-switcher-list">
+          <li>
+            <input
+              class="lang-radio-switcher"
+              data-lang="en"
+              class="lang-switcher"
+              type="radio"
+              name="lang"
+              id="en-lang"
+              checked
+            />
+            <label class="lang-switcher app-button" for="en-lang">En</label>
+          </li>
+          <li>
+            <input
+              class="lang-radio-switcher"
+              data-lang="pl"
+              class="lang-switcher"
+              type="radio"
+              name="lang"
+              id="pl-lang"
+            />
+            <label class="lang-switcher app-button" for="pl-lang">Pl</label>
+          </li>
+        </ul>
+      </div>
       <!-- Dictionary -->
       <div class="sub-container">
         <input
@@ -23,7 +50,7 @@
           placeholder="intercept, intercepting, intercepted, ..."
         />
         <div class="dictionary-filters"></div>
-        <p>Words: <span class="words-count">0</span></p>
+        <p>Total Words: <span class="words-count">0</span></p>
         <ul class="dictionary-list"></ul>
       </div>
 
@@ -64,18 +91,8 @@
           ></textarea>
           <button class="app-button" name="submit">submit</button>
         </form>
+        <p>Total Words: <span class="train-writing-text-total-words">0</span></p>
         <p class="train-writing-text-ai-review"></p>
-      </div>
-
-      <!-- Train grammar -->
-      <div class="sub-container">
-        <p class="title">Train Grammar</p>
-
-        <select class="train-grammar-test-select"></select>
-        <button class="app-button train-grammar-test-generate-button">
-          Generate a test
-        </button>
-        <p class="sub-container train-grammar-test-box"></p>
       </div>
     </div>
     <script src="https://js.puter.com/v2/"></script>

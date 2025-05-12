@@ -1,7 +1,5 @@
 import { vars } from "../vars";
 
-const { storage } = vars;
-
 /**
  *
  * @param {*} word
@@ -9,57 +7,76 @@ const { storage } = vars;
  */
 
 /*
-`
-  <span data-id="${word.id}" class="word-expression id-${id}">word</span><span style="user-select: none;"> [<span class="${
-    word.type.includes("_") ? word.type.split("_").join(" ") : word.type
-  }">${word.type}</span>] ${word.id}</span>${isFavorite ? ` ⭐` : ''}`;
+<button class="word-button" data-id="1">
+  <span class="index">1</span>
+  <span class="expression">word</span>
+  <span class="favorite">⭐</span>
+  <span class="type verb phrase">verb</span>
+  <span class="id">1</span>
+</button>
 */
 
-export default function WordComponent(word, callback = () => { }) {
-    const { id, type, expression } = word;
-    
-  // <span class="word-component-wrapper"></span>
-  const wordComponentWrapper = document.createElement("span");
-
-  // <span data-id="123" class="word-expression">to feel free</span>
-  const wordExpression = document.createElement("span");
-  wordExpression.dataset.id = id;
-  wordExpression.classList.add("word-expression");
-  wordExpression.innerText = expression;
-
-  // <span style="user-select: none;"></span>
-  const extra = document.createElement("span");
-  extra.style.userSelect = "user-select: none;";
-  extra.innerText += " ";
-
-  // <span class="verb phrase">verb_phrase</span>
-  const wordType = document.createElement("span");
-  const classes = type.includes("_") ? type.split("_").join(" ") : type;
-
-  if (classes.includes(" ")) {
-    classes.split(" ").forEach(cls => {
-      wordType.classList.add(cls);
-    });
+export default function WordComponent(word, index = 0, callback = () => { }) {
+  // ===============================================
+  // HOT FIX
+  // ===============================================
+  if (!word) {
+    const div = document.createElement("div");
+    div.style.display = "none";
+    return div;
   }
-  else wordType.classList.add(classes);
 
-  wordType.innerHTML = type;
+  const { id, type, expression } = word;
 
-  // <span style="user-select: none;"> [<span class="verb phrase">verb_phrase</span>] 123</span>
-  extra.innerHTML += "[";
-  extra.appendChild(wordType);
-  extra.innerHTML += "] ";
-  extra.innerHTML += id;
+  // <button class="word-button" data-id="1"></button>
+  const wordButton = document.createElement("button");
+  wordButton.classList.add("word-button");
+  wordButton.classList.add("app-button");
+  wordButton.dataset.id = id;
 
-  // <span style="user-select: none;"> [<span class="verb phrase">verb_phrase</span>] 123 ⭐</span>
-  const favoriteWordsIds = storage.getItem() || [];
-  const isFavorite = favoriteWordsIds.some((favId) => favId === id);
-  extra.innerHTML += isFavorite ? `⭐` : "";
+  // <span class="index">1</span>
+  const indexSpan = document.createElement("span");
+  indexSpan.classList.add("index");
+  indexSpan.innerText = index;
 
-  wordComponentWrapper.appendChild(wordExpression);
-  wordComponentWrapper.appendChild(extra);
+  // <span class="expression">to feel free</span>
+  const wordExpressionText = document.createElement("span");
+  wordExpressionText.classList.add("expression");
+  wordExpressionText.innerText = expression;
 
-  callback(wordComponentWrapper);
+  // <span class="type verb phrase">verb_phrase</span>
+  const wordType = document.createElement("span");
+  wordType.classList.add("type");
+  wordType.classList.add(type);
 
-  return wordComponentWrapper;
+  wordType.innerText = type;
+
+  // <span class="id">1</span>
+  const wordId = document.createElement("span");
+  wordId.classList.add("id");
+  wordId.innerText = id;
+
+  wordButton.appendChild(indexSpan);
+  wordButton.appendChild(wordExpressionText);
+
+  // <span class="favorite">⭐</span>
+  const favoriteWordsIds = vars.storage.getItem() || [];
+  const isFavorite = favoriteWordsIds.some(
+    (favId) => String(favId) === String(id)
+  );
+
+  if (isFavorite) {
+    const favSpan = document.createElement("span");
+    favSpan.classList.add("favorite");
+
+    favSpan.innerText = "⭐";
+    wordButton.appendChild(favSpan);
+  }
+
+  wordButton.appendChild(wordType);
+  wordButton.appendChild(wordId);
+
+  callback(wordButton);
+
+  return wordButton;
 }

@@ -2,26 +2,19 @@ import { getFavoriteWordsFrom, throttle } from "../utils";
 import { elements, vars } from "../vars";
 import { WordComponent } from "../components";
 
-const { wordsInstance, trainWordsFilters } = vars;
-const {
-  trainWordAllWordsElement,
-  trainWordCurrentIndexElement,
-  trainWordRandomWordElement,
-} = elements;
-
 let filteredWords = [];
 let currentWordIndex;
 let inputValue, currentWord;
 
 function foo(word) {
-  trainWordRandomWordElement.innerHTML = "";
-  trainWordRandomWordElement.appendChild(WordComponent(word));
+  elements.trainWordRandomWordElement.innerHTML = "";
+  elements.trainWordRandomWordElement.appendChild(WordComponent(word));
 }
 
 export function initTrainWords() {
   filteredWords = getFavoriteWordsFrom(
-    wordsInstance.getWordsByTypes(trainWordsFilters),
-    trainWordsFilters
+    vars.wordsInstance.getWordsByTypes(vars.trainWordsFilters),
+    vars.trainWordsFilters
   );
 
   currentWordIndex = 0;
@@ -31,20 +24,20 @@ export function initTrainWords() {
 
     currentWord = filteredWords[currentWordIndex].translation.toLowerCase();
 
-    trainWordAllWordsElement.innerHTML = filteredWords.length;
-    trainWordCurrentIndexElement.innerHTML = currentWordIndex + 1;
+    elements.trainWordAllWordsElement.innerHTML = filteredWords.length;
+    elements.trainWordCurrentIndexElement.innerHTML = currentWordIndex + 1;
 
     foo(filteredWords[currentWordIndex]);
   } else {
-    trainWordAllWordsElement.innerHTML = 0;
-    trainWordCurrentIndexElement.innerHTML = 0;
-    trainWordRandomWordElement.innerHTML = "No words found";
+    elements.trainWordAllWordsElement.innerHTML = 0;
+    elements.trainWordCurrentIndexElement.innerHTML = 0;
+    elements.trainWordRandomWordElement.innerHTML = "No words found";
   }
 }
 
 export function getNextWord() {
   currentWordIndex = (currentWordIndex + 1) % filteredWords.length;
-  trainWordCurrentIndexElement.innerHTML = currentWordIndex + 1;
+  elements.trainWordCurrentIndexElement.innerHTML = currentWordIndex + 1;
   return filteredWords[currentWordIndex];
 }
 

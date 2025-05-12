@@ -9,7 +9,7 @@ export default class Words {
   }
 
   getWordById(id) {
-    return this.words.find((word) => word.id === id);
+    return this.words.find((word) => String(word.id) === String(id));
   }
 
   getWordsByType(type) {

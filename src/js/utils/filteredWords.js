@@ -1,12 +1,11 @@
 import { elements, vars } from "../vars.js";
 import WordComponent from "../components/WordComponent.js";
 
-const { wordsInstance, storage, filters } = vars;
-const { dictionaryListElement, wordsCountEl } = elements;
-
 export function getFavoriteWordsFrom(words, filters) {
-  const favoriteWordsId = storage.getItem() || [];
-  const favWords = favoriteWordsId.map((id) => wordsInstance.getWordById(id));
+  const favoriteWordsId = vars.storage.getItem() || [];
+  const favWords = favoriteWordsId.map((id) =>
+    vars.wordsInstance.getWordById(id)
+  );
 
   if (filters.favorite) {
     words = [...new Set([...words, ...favWords])];
@@ -28,7 +27,10 @@ export function getResembledWords(searchTerm) {
     ...new Set(
       wordsArray
         .map((word) =>
-          wordsInstance.getWordsByContains(word.trimLeft(), filters)
+          vars.wordsInstance.getWordsByContains(
+            word.trimLeft(),
+            vars.dic_filters
+          )
         )
         .flat()
     ),
@@ -38,16 +40,21 @@ export function getResembledWords(searchTerm) {
 }
 
 export function renderFilteredWords(searchTerm) {
-  let filteredWords = getFavoriteWordsFrom(getResembledWords(searchTerm), filters);
+  let filteredWords = getFavoriteWordsFrom(
+    getResembledWords(searchTerm),
+    vars.dic_filters
+  );
 
-  dictionaryListElement.innerHTML = '';
+  // console.log(filteredWords);
 
-  const lis = filteredWords.map((word) => {
+  elements.dictionaryListElement.innerHTML = "";
+
+  const lis = filteredWords.map((word, index) => {
     const li = document.createElement("li");
-    li.appendChild(WordComponent(word));
+    li.appendChild(WordComponent(word, index + 1));
     return li;
   });
 
-  lis.forEach(li => dictionaryListElement.appendChild(li));
-  wordsCountEl.innerHTML = filteredWords.length;
+  lis.forEach((li) => elements.dictionaryListElement.appendChild(li));
+  elements.wordsCountEl.innerHTML = filteredWords.length;
 }

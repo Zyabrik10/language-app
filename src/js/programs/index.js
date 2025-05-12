@@ -1,2 +1,1 @@
-export *from "./TrainWords";
-export * from "./TrainGrammar";
+export * from "./TrainWords";
