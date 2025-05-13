@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>English App</title>
+    <title>Language App</title>
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
@@ -25,7 +25,6 @@
               type="radio"
               name="lang"
               id="en-lang"
-              checked
             />
             <label class="lang-switcher app-button" for="en-lang">En</label>
           </li>
@@ -37,6 +36,7 @@
               type="radio"
               name="lang"
               id="pl-lang"
+              checked
             />
             <label class="lang-switcher app-button" for="pl-lang">Pl</label>
           </li>
@@ -91,11 +91,30 @@
           ></textarea>
           <button class="app-button" name="submit">submit</button>
         </form>
-        <p>Total Words: <span class="train-writing-text-total-words">0</span></p>
+        <p>
+          Total Words: <span class="train-writing-text-total-words">0</span>
+        </p>
         <p class="train-writing-text-ai-review"></p>
+      </div>
+
+      <!-- Transform words into sequence -->
+      <div class="sub-container">
+        <p class="title">Transform words into sequence</p>
+        <form class="transform-words-form sub-container" action="">
+          <input
+            type="text"
+            class="app-input"
+            name="input"
+            placeholder="intercept, intercepting, intercepted, ..."
+            autocomplete="off"
+          />
+          <button class="app-button" name="transform_button">Transform</button>
+        </form>
+        <button class="app-button transform-words-clear-button" name="clear_button">Clear</button>
+        <pre class="transform-words-pre"></pre>
       </div>
     </div>
     <script src="https://js.puter.com/v2/"></script>
-    <script src="./js/index.js" type="module"></script>
+    <script src="./js/main.js" type="module"></script>
   </body>
 </html>

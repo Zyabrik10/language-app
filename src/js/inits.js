@@ -1,20 +1,28 @@
-import words_array_en from "../words-en.json";
-import words_array_pl from "../words-pl.json";
+// Words import
+import words_array_en from "../words/en.json";
+import words_array_pl from "../words/pl.json";
 
+// Modules import
 import {
   aiTopicDescriptionPrompt,
   aiWritingReviewPrompt,
   wordsExamplesPrompt,
-} from "../prompts";
+} from "./prompts.js";
 import LocalStorage from "./classes/LocalStorage";
 import Words from "./classes/Words";
 import { elements, vars } from "./vars.js";
-import { throttle, renderFilteredWords, openWordModal, parseWords } from "./utils";
+import {
+  throttle,
+  renderFilteredWords,
+  openWordModal,
+  parseWords,
+} from "./utils";
 import { initTrainWords, TrainWords } from "./programs";
 import { FilterComponent } from "./components";
 
+// Parsing words
 const words = {
-  en: words_array_en,
+  en: parseWords(words_array_en),
   pl: parseWords(words_array_pl),
 };
 
@@ -55,6 +63,11 @@ export function initElements() {
   );
   elements.trainWritingTextTextArea = document.querySelector(
     ".train-writing-text-textarea"
+  );
+  elements.transformWordsPre = document.querySelector(".transform-words-pre");
+  elements.transformWordsForm = document.querySelector(".transform-words-form");
+  elements.transformWordsClearButton = document.querySelector(
+    ".transform-words-clear-button"
   );
 }
 
@@ -105,7 +118,7 @@ export function initVars(localstorage, lang) {
 
   const keys = Object.keys(vars.filters);
 
-for (const key in keys) {
+  for (const key in keys) {
     vars.dic_filters[key] = false;
     vars.trainWordsFilters[key] = false;
   }
@@ -175,7 +188,7 @@ export function setEvents() {
   // Global clicking on word component to render modal window of it
   window.addEventListener("click", (event) => {
     if (!event.target.closest(".word-button")) return;
-    
+
     const id = event.target.closest(".word-button").dataset.id;
     const word = vars.wordsInstance.getWordById(id);
 
@@ -186,7 +199,11 @@ export function setEvents() {
 
     modalButtonAiGen.addEventListener("click", () => {
       const { expression, type } = word;
-      const prompt = wordsExamplesPrompt(expression, type, vars.langs[vars.lang]);
+      const prompt = wordsExamplesPrompt(
+        expression,
+        type,
+        vars.langs[vars.lang]
+      );
 
       modalGenTextEl.innerHTML = "Loading...";
       modalButtonAiGen.disabled = true;
@@ -196,7 +213,6 @@ export function setEvents() {
         modalButtonAiGen.disabled = false;
       });
     });
-
   });
 
   // Setting up feature changing languages
@@ -204,7 +220,12 @@ export function setEvents() {
     radio.addEventListener("change", function () {
       if (this.checked) {
         let lang = this.dataset.lang;
-        initVars(`favorite${lang[0].toUpperCase() + lang.split("").splice(1).join("")}Words`, lang);
+        initVars(
+          `favorite${
+            lang[0].toUpperCase() + lang.split("").splice(1).join("")
+          }Words`,
+          lang
+        );
         onAllInits();
       }
     });
@@ -213,6 +234,33 @@ export function setEvents() {
   elements.trainWritingTextTextArea.addEventListener("input", () => {
     elements.trainWritingTextTotalWords.innerText =
       elements.trainWritingTextTextArea.value.trim().split(" ").length;
+  });
+
+  elements.transformWordsForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const words = e.target.input.value.trim().split(",");
+
+    let str = ",";
+
+    for (let i = 0; i < words.length; i++) {
+      const word = words[i].trim().toLowerCase();
+
+      if (i + 1 === words.length)
+        str += `"${
+          vars.wordsInstance.getWordCount() + i + 2
+        } | ${word} | Niema tłumaczenia | noun | Niema wytłumaczenia"`;
+      else
+        str += `"${
+          vars.wordsInstance.getWordCount() + i + 2
+        } | ${word} | Niema tłumaczenia | noun | Niema wytłumaczenia",\n`;
+    }
+
+    elements.transformWordsPre.innerText = str;
+  });
+
+  elements.transformWordsClearButton.addEventListener("click", () => {
+    elements.transformWordsPre.innerText = "";
   });
 
   function askAI(prompt) {

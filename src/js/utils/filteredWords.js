@@ -7,6 +7,7 @@ export function getFavoriteWordsFrom(words, filters) {
     vars.wordsInstance.getWordById(id)
   );
 
+
   if (filters.favorite) {
     words = [...new Set([...words, ...favWords])];
   } else {
@@ -44,8 +45,6 @@ export function renderFilteredWords(searchTerm) {
     getResembledWords(searchTerm),
     vars.dic_filters
   );
-
-  // console.log(filteredWords);
 
   elements.dictionaryListElement.innerHTML = "";
 
