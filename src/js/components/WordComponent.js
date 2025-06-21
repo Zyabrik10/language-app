@@ -17,6 +17,11 @@ import { vars } from "../vars";
 */
 
 export default function WordComponent(word, index = 0, callback = () => {}) {
+  // HOT FIX
+  if (!word) {
+    const div = document.createElement("div");
+    return div;
+  }
   const { id, type, expression } = word;
 
   // <button class="word-button" data-id="1"></button>

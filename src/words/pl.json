@@ -401,5 +401,8 @@
   "402 | zdejmować soczewki | знімати лінзи | verb_phrase | Usuwać soczewki kontaktowe z oczu.",
   "403 | jest wygodne | це зручно | adjective_phrase | Określenie czegoś, co zapewnia komfort użytkowania.",
   "404 | nadal | Niema tłumaczenia | noun | Niema wytłumaczenia",
-  "405 | jak najbardziej | якнайбільше, безумовно, звичайно | твердження/підтвердження | Вираз сильної згоди або підтвердження, еквівалент укр. 'так', але з натиском"
+  "405 | jak najbardziej | якнайбільше, безумовно, звичайно | твердження/підтвердження | Вираз сильної згоди або підтвердження, еквівалент укр. 'так', але з натиском",
+  "406 | wcale | взагалі | adverb | 'Wcale' to przysłówkiem oznaczającym negację. Oznacza 'w żaden sposób', 'wcale nie' lub 'zupełnie'. Można go użyć do wyrażenia pełnego braku czegoś, negacji lub żeby podkreślić, że coś nie jest zgodne z oczekiwaniami. Wcale brzmi mocniej w zaprzeczeniach.",
+  "407 | w ogóle | взагалі | adverb | 'W ogóle' jest bardziej uniwersalne i może też wprowadzać temat ('W ogóle to mam pytanie...'). Porównanie z wcale",
+  "408 | zupełnie | взагалі | adverb | nie wiadomo"
 ]
