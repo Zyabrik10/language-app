@@ -69,6 +69,7 @@ export function initElements() {
   elements.transformWordsClearButton = document.querySelector(
     ".transform-words-clear-button"
   );
+  elements.allLinkButtons = document.querySelectorAll(".link-button");
 }
 
 export function initVars(localstorage, lang) {
@@ -187,32 +188,37 @@ export function setEvents() {
 
   // Global clicking on word component to render modal window of it
   window.addEventListener("click", (event) => {
-    if (!event.target.closest(".word-button")) return;
+    if (event.target.closest(".word-button")) {
+      const id = event.target.closest(".word-button").dataset.id;
+      const word = vars.wordsInstance.getWordById(id);
 
-    const id = event.target.closest(".word-button").dataset.id;
-    const word = vars.wordsInstance.getWordById(id);
+      openWordModal(word);
 
-    openWordModal(word);
+      const modalButtonAiGen = document.querySelector(".modal-button-ai-gen");
+      const modalGenTextEl = document.querySelector(".modal-gen-text");
 
-    const modalButtonAiGen = document.querySelector(".modal-button-ai-gen");
-    const modalGenTextEl = document.querySelector(".modal-gen-text");
+      modalButtonAiGen.addEventListener("click", () => {
+        const { expression, type } = word;
+        const prompt = wordsExamplesPrompt(
+          expression,
+          type,
+          vars.langs[vars.lang]
+        );
 
-    modalButtonAiGen.addEventListener("click", () => {
-      const { expression, type } = word;
-      const prompt = wordsExamplesPrompt(
-        expression,
-        type,
-        vars.langs[vars.lang]
-      );
+        modalGenTextEl.innerHTML = "Loading...";
+        modalButtonAiGen.disabled = true;
 
-      modalGenTextEl.innerHTML = "Loading...";
-      modalButtonAiGen.disabled = true;
-
-      askAI(prompt).then((response) => {
-        modalGenTextEl.innerHTML = response.message.content;
-        modalButtonAiGen.disabled = false;
+        askAI(prompt).then((response) => {
+          modalGenTextEl.innerHTML = response.message.content;
+          modalButtonAiGen.disabled = false;
+        });
       });
-    });
+    } else if (event.target.closest(".link-button")) {
+      const btn = event.target.closest(".link-button");
+
+      elements.allLinkButtons.forEach((e) => e.classList.remove("active"));
+      btn.classList.add("active");
+    }
   });
 
   // Setting up feature changing languages

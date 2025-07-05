@@ -14,8 +14,22 @@
         <button class="modal-close-btn app-button">Close</button>
       </div>
     </div>
-    <div class="container">
-      <div class="sub-container">
+    <header>
+      <div class="container">
+        <nav>
+          <ul>
+            <li>
+              <label class="app-button link-button active" for="dictionary">
+                Dictionary
+              </label>
+            </li>
+            <li>
+              <label class="app-button link-button" for="trainee">
+                Trainee
+              </label>
+            </li>
+          </ul>
+        </nav>
         <ul class="lang-switcher-list">
           <li>
             <input
@@ -25,6 +39,7 @@
               type="radio"
               name="lang"
               id="en-lang"
+              checked
             />
             <label class="lang-switcher app-button" for="en-lang">En</label>
           </li>
@@ -36,84 +51,115 @@
               type="radio"
               name="lang"
               id="pl-lang"
-              checked
             />
             <label class="lang-switcher app-button" for="pl-lang">Pl</label>
           </li>
         </ul>
       </div>
-      <!-- Dictionary -->
-      <div class="sub-container">
-        <input
-          class="app-input dictionary-input"
-          type="text"
-          placeholder="intercept, intercepting, intercepted, ..."
-        />
-        <div class="dictionary-filters"></div>
-        <p>Total Words: <span class="words-count">0</span></p>
-        <ul class="dictionary-list"></ul>
+    </header>
+    <main>
+      <input
+        type="radio"
+        id="dictionary"
+        name="pages"
+        class="page-radio-button"
+        checked
+      />
+      <div class="page">
+        <section class="page-section">
+          <div class="container">
+            <!-- Dictionary -->
+            <div class="sub-container">
+              <input
+                class="app-input dictionary-input"
+                type="text"
+                placeholder="intercept, intercepting, intercepted, ..."
+              />
+              <div class="dictionary-filters"></div>
+              <p>Total Words: <span class="words-count">0</span></p>
+              <ul class="dictionary-list"></ul>
+            </div>
+
+            <!-- Transform words into sequence -->
+            <div class="sub-container">
+              <p class="title">Transform words into sequence</p>
+              <form class="transform-words-form sub-container" action="">
+                <input
+                  type="text"
+                  class="app-input"
+                  name="input"
+                  placeholder="intercept, intercepting, intercepted, ..."
+                  autocomplete="off"
+                />
+                <button class="app-button" name="transform_button">
+                  Transform
+                </button>
+              </form>
+              <button
+                class="app-button transform-words-clear-button"
+                name="clear_button"
+              >
+                Clear
+              </button>
+              <pre class="transform-words-pre"></pre>
+            </div>
+          </div>
+        </section>
       </div>
 
-      <!-- Train Words -->
-      <div class="sub-container">
-        <p class="title">Train Words</p>
-        <p class="description">
-          Write a translation of the word below. Your task is to write correct
-          translation for all words.
-        </p>
-        <span class="train-word-random-word"></span>
-        <p>
-          <span class="train-word-currentIndex">0</span>/<span
-            class="train-word-allWords"
-            >0</span
-          >
-        </p>
-        <div class="train-words-filters"></div>
-        <form class="train-word-form" action="">
-          <input
-            type="text"
-            class="train-word-input app-input"
-            placeholder="translation"
-          />
-        </form>
-      </div>
+      <input type="radio" id="trainee" name="pages" class="page-radio-button" />
+      <div class="page">
+        <section class="page-section">
+          <div class="container">
+            <!-- Train Words -->
+            <div class="sub-container">
+              <p class="title">Train Words</p>
+              <p class="description">
+                Write a translation of the word below. Your task is to write
+                correct translation for all words.
+              </p>
+              <span class="train-word-random-word"></span>
+              <p>
+                <span class="train-word-currentIndex">0</span>/<span
+                  class="train-word-allWords"
+                  >0</span
+                >
+              </p>
+              <div class="train-words-filters"></div>
+              <form class="train-word-form" action="">
+                <input
+                  type="text"
+                  class="train-word-input app-input"
+                  placeholder="translation"
+                />
+              </form>
+            </div>
 
-      <!-- Train Writing Text -->
-      <div class="sub-container">
-        <p class="title">Train Writing Text</p>
-        <p class="description">Train Writing Text on a specific topic.</p>
-        <button class="app-button generate-topic-button">Generate topic</button>
-        <p class="ai-topic-description"></p>
-        <form class="train-writing-text-form">
-          <textarea
-            class="train-writing-text-textarea"
-            name="train_writing_text_textarea"
-          ></textarea>
-          <button class="app-button" name="submit">submit</button>
-        </form>
-        <p>
-          Total Words: <span class="train-writing-text-total-words">0</span>
-        </p>
-        <p class="train-writing-text-ai-review"></p>
+            <!-- Train Writing Text -->
+            <div class="sub-container">
+              <p class="title">Train Writing Text</p>
+              <p class="description">Train Writing Text on a specific topic.</p>
+              <button class="app-button generate-topic-button">
+                Generate topic
+              </button>
+              <p class="ai-topic-description"></p>
+              <form class="train-writing-text-form">
+                <textarea
+                  class="train-writing-text-textarea"
+                  name="train_writing_text_textarea"
+                ></textarea>
+                <button class="app-button" name="submit">submit</button>
+              </form>
+              <p>
+                Total Words:
+                <span class="train-writing-text-total-words">0</span>
+              </p>
+              <p class="train-writing-text-ai-review"></p>
+            </div>
+          </div>
+        </section>
       </div>
-
-      <!-- Transform words into sequence -->
-      <div class="sub-container">
-        <p class="title">Transform words into sequence</p>
-        <form class="transform-words-form sub-container" action="">
-          <input
-            type="text"
-            class="app-input"
-            name="input"
-            placeholder="intercept, intercepting, intercepted, ..."
-            autocomplete="off"
-          />
-          <button class="app-button" name="transform_button">Transform</button>
-        </form>
-        <button class="app-button transform-words-clear-button" name="clear_button">Clear</button>
-        <pre class="transform-words-pre"></pre>
-      </div>
-    </div>
+    </main>
     <script src="https://js.puter.com/v2/"></script>
     <script src="./js/main.js" type="module"></script>
   </body>
