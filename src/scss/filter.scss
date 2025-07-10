@@ -16,6 +16,10 @@
   }
 }
 
+.filter-list li{
+  text-transform: capitalize;
+}
+
 .filter-list input {
   visibility: hidden;
   width: 0;
@@ -40,6 +44,8 @@
   color: var(--color-7);
 }
 
+/* A BOX FOR HIDING FILTERS */
+
 .filter-list-des-box{
   overflow: hidden;
 }
@@ -51,6 +57,8 @@
 .filter-list-des-box.hidden > div{
   margin-top: -100%;
 }
+
+/* /A BOX FOR HIDING FILTERS */
 
 .filter-open-close-button{
   display: flex;

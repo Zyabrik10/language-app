@@ -1,6 +1,6 @@
 .dictionary-list {
   border-radius: var(--g-b-r);
-  max-height: 400px;
+  max-height: 800px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -20,19 +20,19 @@
 .word-button .expression{
   user-select: all;
   color: var(--color-2);
-}
 
-.word-button .expression::first-letter {
-  text-transform: capitalize;
-  font-weight: 600;
+  &::first-letter{
+    text-transform: capitalize;
+    font-weight: 600;
+  }
 }
 
 .word-button .type{
-  margin-left: 10px;
+  margin-left: auto;
   display: none;
 }
 
-@media screen and (min-width: 500px){
+@media screen and (min-width: 100px){
   .word-button .type{
     display: block;
   } 

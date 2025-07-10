@@ -19,11 +19,7 @@ let c = 0;
 </div>
 */
 
-export default function FilterComponent(
-  filtersObject,
-  filters,
-  callback = () => {}
-) {
+export default function FilterComponent(filters, callback = () => {}) {
   // <div class="sub-container"></div>
   const container = document.createElement("div");
   container.classList.add("sub-container");
@@ -64,23 +60,23 @@ export default function FilterComponent(
   ul.classList.add("flex-container");
   ul.classList.add("filter-list");
 
-  for (const filter in filters) {
+  for (const filterKey in filters) {
     // <li></li>
     const li = document.createElement("li");
-    const id = filter + c;
+    const id = filterKey + c;
 
     // <label for="noun">Noun </label>
     const label = document.createElement("label");
-    label.classList.add(filter);
+    label.classList.add(filterKey);
     label.setAttribute("for", id);
-    label.innerText += filters[filter] + " ";
+    label.innerText += filters[filterKey].expression + " ";
 
     // <input type="checkbox" checked id="noun" name="noun">
     const input = document.createElement("input");
     input.type = "checkbox";
     input.checked = true;
     input.id = id;
-    input.name = filter;
+    input.name = filterKey;
 
     // <li><label for="noun">Noun <input type="checkbox" checked id="noun" name="noun"></label></li>
     li.appendChild(input);
@@ -98,10 +94,13 @@ export default function FilterComponent(
   const inputs = ul.querySelectorAll("input[type='checkbox']");
 
   inputs.forEach((filterCheck) => {
-    filtersObject[filterCheck.name] = filterCheck.checked;
+    const type = filterCheck.name;
+    filters[type].used = filterCheck.checked;
+
     filterCheck.addEventListener("change", (event) => {
       const type = event.target.name;
-      filtersObject[type] = event.target.checked;
+      filters[type].used = event.target.checked;
+
       callback();
     });
   });
@@ -110,7 +109,9 @@ export default function FilterComponent(
 
   button.addEventListener("click", () => {
     inputs.forEach((filterCheck) => {
-      filtersObject[filterCheck.name] = !toggle;
+      const type = filterCheck.name;
+      filters[type].used = !toggle;
+
       filterCheck.checked = !toggle;
     });
     toggle = !toggle;

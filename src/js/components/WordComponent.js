@@ -1,4 +1,4 @@
-import { vars } from "../vars";
+import { vars } from "../globalVariables";
 
 /**
  *
@@ -12,7 +12,6 @@ import { vars } from "../vars";
   <span class="expression">word</span>
   <span class="favorite">⭐</span>
   <span class="type verb phrase">verb</span>
-  <span class="id">1</span>
 </button>
 */
 
@@ -47,19 +46,12 @@ export default function WordComponent(word, index = 0, callback = () => {}) {
 
   wordType.innerText = type;
 
-  // <span class="id">1</span>
-  const wordId = document.createElement("span");
-  wordId.classList.add("id");
-  wordId.innerText = id;
 
   wordButton.appendChild(indexSpan);
   wordButton.appendChild(wordExpressionText);
 
   // <span class="favorite">⭐</span>
-  const favoriteWordsIds = vars.storage.getItem() || [];
-  const isFavorite = favoriteWordsIds.some(
-    (favId) => String(favId) === String(id)
-  );
+  const isFavorite = vars.wordsInstance.getById(id).favorite;
 
   if (isFavorite) {
     const favSpan = document.createElement("span");
@@ -70,7 +62,6 @@ export default function WordComponent(word, index = 0, callback = () => {}) {
   }
 
   wordButton.appendChild(wordType);
-  wordButton.appendChild(wordId);
 
   callback(wordButton);
 

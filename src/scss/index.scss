@@ -1,14 +1,14 @@
-@import url("./reset-normalize.css");
-@import url("./variables.css");
-@import url("./global.css");
-@import url("./scroll.css");
-@import url("./header.css");
-@import url("./modal.css");
-@import url("./mod-colors.css");
-@import url("./dictionary.css");
-@import url("./filter.css");
+@use 'scss-reset/reset';
+@use "./variables.scss";
+@use "./global.scss";
+@use "./scroll.scss";
+@use "./header.scss";
+@use "./modal.scss";
+@use "./mod-colors.scss";
+@use "./dictionary.scss";
+@use "./filter.scss";
 
-.train-writing-text-textarea{
+.train-writing-text-textarea {
   border-radius: var(--g-b-r);
   padding: 8px 16px;
   width: 100%;
@@ -22,73 +22,83 @@
   border: 1px solid var(--color-5);
 }
 
-.train-word-input:focus{
+.train-word-input:focus {
   outline: none;
 }
 
-.train-grammar-test-generate-button{
+.train-grammar-test-generate-button {
   margin-top: 10px;
 }
 
-.topic-title{
+.topic-title {
   font-size: 20px;
   font-weight: 600;
 }
 
-.test-list > li > p{
+.test-list > li > p {
   font-size: 16px;
   font-weight: 600;
 }
 
-.test-list > li > ul{
+.test-list > li > ul {
   margin-left: 50px;
   list-style-type: decimal;
 }
 
-.lang-switcher-list{
+.lang-switcher-list {
   gap: 10px;
   display: flex;
 }
 
-.lang-switcher{
+.lang-switcher {
+  width: 37px;
+  height: 37px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.lang-radio-switcher{
+.lang-radio-switcher {
   visibility: hidden;
   width: 0;
   height: 0;
   position: absolute;
 }
 
-.lang-radio-switcher:checked ~ .lang-switcher{
+.lang-radio-switcher:checked ~ .lang-switcher {
   background-color: var(--color-6);
 }
 
-.link-button{
+.link-button {
   cursor: pointer;
   padding: 10px;
 }
 
-.link-button.active{
+.link-button.active {
   background-color: var(--color-6);
   border-radius: var(--g-b-r);
 }
 
-.page-radio-button{
+.page-radio-button {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: none;
 }
 
-.page-radio-button + .page{
-  height: 0;
+.page-radio-button + .page {
+  position: absolute;
+  transform: scale(0);
+  top: 0;
+  left: 0;
   opacity: 0;
   pointer-events: none;
 }
 
-.page-radio-button:checked + .page{
+.page-radio-button:checked + .page {
+  transform: scale(1);
+  position: static;
   opacity: 1;
   pointer-events: all;
   transition: opacity 0.5s ease;

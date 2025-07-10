@@ -4,18 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Language App</title>
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./scss/index.scss" />
   </head>
   <body>
-    <div class="modal">
-      <div class="container modal-container">
-        <div class="modal-content"></div>
-        <button class="modal-add-btn app-button">Add to Favorite</button>
-        <button class="modal-close-btn app-button">Close</button>
-      </div>
-    </div>
+    <!-- HEADER -->
     <header>
       <div class="container">
+        <!-- MAIN WEBSITE NAVIGATION -->
         <nav>
           <ul>
             <li>
@@ -24,12 +19,15 @@
               </label>
             </li>
             <li>
-              <label class="app-button link-button" for="trainee">
-                Trainee
+              <label class="app-button link-button" for="training">
+                Training
               </label>
             </li>
           </ul>
         </nav>
+        <!-- /MAIN WEBSITE NAVIGATION -->
+
+        <!-- LANGUAGE SWITCHER -->
         <ul class="lang-switcher-list">
           <li>
             <input
@@ -55,8 +53,12 @@
             <label class="lang-switcher app-button" for="pl-lang">Pl</label>
           </li>
         </ul>
+        <!-- LANGUAGE SWITCHER -->
       </div>
     </header>
+    <!-- /HEADER -->
+
+    <!-- MAIN -->
     <main>
       <input
         type="radio"
@@ -66,9 +68,9 @@
         checked
       />
       <div class="page">
+        <!-- DICTIONARY -->
         <section class="page-section">
           <div class="container">
-            <!-- Dictionary -->
             <div class="sub-container">
               <input
                 class="app-input dictionary-input"
@@ -79,41 +81,18 @@
               <p>Total Words: <span class="words-count">0</span></p>
               <ul class="dictionary-list"></ul>
             </div>
-
-            <!-- Transform words into sequence -->
-            <div class="sub-container">
-              <p class="title">Transform words into sequence</p>
-              <form class="transform-words-form sub-container" action="">
-                <input
-                  type="text"
-                  class="app-input"
-                  name="input"
-                  placeholder="intercept, intercepting, intercepted, ..."
-                  autocomplete="off"
-                />
-                <button class="app-button" name="transform_button">
-                  Transform
-                </button>
-              </form>
-              <button
-                class="app-button transform-words-clear-button"
-                name="clear_button"
-              >
-                Clear
-              </button>
-              <pre class="transform-words-pre"></pre>
-            </div>
           </div>
         </section>
+        <!-- /DICTIONARY -->
       </div>
 
-      <input type="radio" id="trainee" name="pages" class="page-radio-button" />
+      <input type="radio" id="training" name="pages" class="page-radio-button" />
       <div class="page">
+        <!-- TRAIN WORDS-->
         <section class="page-section">
           <div class="container">
-            <!-- Train Words -->
             <div class="sub-container">
-              <p class="title">Train Words</p>
+              <p class="title no-top">Train Words</p>
               <p class="description">
                 Write a translation of the word below. Your task is to write
                 correct translation for all words.
@@ -139,10 +118,6 @@
             <div class="sub-container">
               <p class="title">Train Writing Text</p>
               <p class="description">Train Writing Text on a specific topic.</p>
-              <button class="app-button generate-topic-button">
-                Generate topic
-              </button>
-              <p class="ai-topic-description"></p>
               <form class="train-writing-text-form">
                 <textarea
                   class="train-writing-text-textarea"
@@ -158,9 +133,22 @@
             </div>
           </div>
         </section>
+        <!-- /TRAIN WORDS-->
       </div>
     </main>
+    <!-- /MAIN -->
+
+    <!-- MODALS -->
+    <div class="modal">
+      <div class="container">
+        <button class="modal-close-btn">&times;</button>
+        <div class="modal-content"></div>
+        <button class="modal-add-btn app-button">Add to Favorite</button>
+      </div>
+    </div>
+    <!-- /MODALS -->
+
     <script src="https://js.puter.com/v2/"></script>
-    <script src="./js/main.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>

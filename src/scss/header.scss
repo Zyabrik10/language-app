@@ -1,15 +1,17 @@
-header .container{
+header {
+  .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
-
-header nav{
+  }
+  
+  nav {
     margin: 0 auto;
-}
 
-header nav ul{
-    display: flex;
-    gap: 10px;
+    ul {
+      display: flex;
+      gap: 10px;
+    }
+  }
 }

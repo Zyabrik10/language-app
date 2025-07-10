@@ -1,5 +1,5 @@
-import { getFavoriteWordsFrom, throttle } from "../utils";
-import { elements, vars } from "../vars";
+import { throttle } from "../utils";
+import { elements, vars } from "../globalVariables";
 import { WordComponent } from "../components";
 
 let filteredWords = [];
@@ -12,10 +12,19 @@ function foo(word) {
 }
 
 export function initTrainWords() {
-  filteredWords = getFavoriteWordsFrom(
-    vars.wordsInstance.getWordsByTypes(vars.trainWordsFilters),
-    vars.trainWordsFilters
+  const typedWords = vars.wordsInstance.getWordsByTypes(
+    vars.wordsInstance.d,
+    ...Object.keys(vars.filters.trainWords).map(
+      (key) => vars.filters.trainWords[key] && `${key}`
+    )
   );
+
+  filteredWords =
+    typedWords.length !== 0 ? typedWords : vars.wordsInstance.getFavorites();
+
+  if (!vars.filters.dictionary.favorite) {
+    filteredWords = filteredWords.filter(({ favorite }) => !favorite);
+  }
 
   currentWordIndex = 0;
 

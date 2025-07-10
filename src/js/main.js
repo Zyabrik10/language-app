@@ -1,14 +1,21 @@
-import { initElements, initVars, onAllInits, setEvents } from "./inits.js";
-import { elements } from "./vars.js";
+import { elements, vars } from "./globalVariables.js";
 
-window.addEventListener("load", function actionRightAfterPageIsLoad() {
-  initElements();
-  const lang = Array.from(elements.langSwitchers).filter((e) => e.checked)[0]
-    .dataset.lang;
-  initVars(
-    `favorite${lang[0].toUpperCase() + lang.split("").splice(1).join("")}Words`,
-    lang
-  );
-  setEvents();
-  onAllInits();
-});
+import { initTrainWords, TrainWords } from "./programs/index.js";
+import { FilterComponent } from "./components/index.js";
+import { renderFilteredWords } from "./utils/filteredWords.js";
+
+export function 
+
+main() {
+  // === rendering filters ===
+  elements.dictionaryFilters.innerHTML = "";
+  elements.trainWordsFiltersElement.innerHTML = "";
+  elements.dictionaryFilters.appendChild(FilterComponent(vars.filters.dictionary, () => renderFilteredWords(elements.searchInput.value)));
+  elements.trainWordsFiltersElement.appendChild(FilterComponent(vars.filters.trainWords, () => initTrainWords()));
+
+  // === Render dictionary && Render words amount === important so filter is initiated
+  renderFilteredWords();
+
+  // === Render practices ===
+  TrainWords();
+}
