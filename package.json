@@ -6,8 +6,7 @@
   "scripts": {
     "start": "parcel",
     "build": "parcel build src/index.html --public-url ./",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "parcel": "^2.14.4"
