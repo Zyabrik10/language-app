@@ -7,11 +7,11 @@ function getResembledWords(searchTerm) {
     ...new Set(
       partsArray
         .map((part) => {
-          const wordsByPart = vars.wordsInstance.getWordsByPart(
+          const wordsByPart = vars.dictionary.getWordsByPart(
             part.trimLeft()
           );
 
-          const typedWords = vars.wordsInstance.getWordsByTypes(
+          const typedWords = vars.dictionary.getWordsByTypes(
             wordsByPart,
             ...Object.keys(vars.filters.dictionary).map(
               (key) => vars.filters.dictionary[key].used && `${key}`
@@ -21,7 +21,7 @@ function getResembledWords(searchTerm) {
           let favFiltered =
             typedWords.length !== 0
               ? typedWords
-              : vars.wordsInstance.getFavorites();
+              : vars.dictionary.getFavorites();
 
           if (!vars.filters.dictionary.favorite.used) {
             favFiltered = favFiltered.filter(({ favorite }) => !favorite);
@@ -38,7 +38,7 @@ function getResembledWords(searchTerm) {
 
 export default function renderDictionary(searchTerm = "") {
   const wordsByPart = getResembledWords(searchTerm);
-  const sortedWords = vars.wordsInstance.getSorted(wordsByPart);
+  const sortedWords = vars.dictionary.getSorted(wordsByPart);
 
   elements.dictionary.listElement.innerHTML = "";
 

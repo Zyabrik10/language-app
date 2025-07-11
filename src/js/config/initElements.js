@@ -35,6 +35,7 @@ function initWordExtraInfoModal() {
     translation: document.querySelector(".word-extra-info-modal .translation"),
     description: document.querySelector(".word-extra-info-modal .description"),
     aiGeneratedText: document.querySelector(".word-extra-info-modal .ai-generated-text"),
+    aiTextGenerationButton: document.querySelector(".word-extra-info-modal .ai-text-generation-button"),
   }
 }
 

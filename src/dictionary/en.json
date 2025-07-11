@@ -1,6 +1,6 @@
 [
-  "0 | a ballpark figure | орієнтовна цифра | phrase | Phrase | Приблизна оцінка кількості або суми",
-  "1 | a bit down | трохи сумний | phrase | Phrase | Почуватися не дуже добре або трохи пригніченим",
+  "0 | a ballpark figure | Орієнтовна цифра | phrase | Phrase | Приблизна оцінка кількості або суми",
+  "1 | a bit down | Трохи сумний | phrase | Phrase | Почуватися не дуже добре або трохи пригніченим",
   "2 | a close-knit community | Згуртована громада | noun_phrase | Noun Phrase | Група людей, які тісно пов'язані між собою",
   "3 | a free spirit | Вільна душа | noun_phrase | Noun Phrase | Людина, яка живе незалежно та не слідує звичним нормам",
   "4 | a free-for-all | Безлад | noun | Noun | Ситуація без правил або контролю",
@@ -8,7 +8,7 @@
   "6 | a helping hand | Допоміжна рука | noun_phrase | Noun Phrase | Допомога комусь",
   "7 | a hostile | Ворожий | noun | Noun | Людина або група, що виявляє ворожість",
   "8 | a long-standing immigrant community | Давня громада іммігрантів | noun_phrase | Noun Phrase | Спільнота іммігрантів, яка існує тривалий час",
-  "9 | a play on words | гра слів | phrase | Phrase | Жарт, заснований на подвійному значенні слів",
+  "9 | a play on words | Гра слів | phrase | Phrase | Жарт, заснований на подвійному значенні слів",
   "10 | a reality check | Перевірка реальністю | noun_phrase | Noun Phrase | Момент усвідомлення реального стану речей",
   "11 | a rich heritage | Багата спадщина | noun_phrase | Noun Phrase | Культурні або історичні цінності, що передаються з покоління в покоління",
   "12 | a sure path | Вірний шлях | noun_phrase | Noun Phrase | Гарантований спосіб досягнення чогось",
@@ -62,7 +62,7 @@
   "60 | to move around | пересуватися | phrasal_verb | Phrasal Verb | Рухатися з місця на місце",
   "61 | to move off | від'їжджати | phrasal_verb | Phrasal Verb | Починати рух (про транспорт)",
   "62 | musically gifted | музично обдарований | adjective_phrase | Adjective Phrase | Має природній музичний талант",
-  "63 | no such thing as a free lunch | безкоштовних обідів не буває | proverb | Proverb | Усьо в цьому світі має свою ціну",
+  "63 | no such thing as a free lunch | безкоштовних обідів не буває | proverb | Proverb | Усe в цьому світі має свою ціну",
   "64 | not rocket science | не найскладніше | phrase | Phrase | Щось легке для розуміння",
   "65 | on edge | напружений | adjective_phrase | Adjective Phrase | Почуття тривоги або нервозності",
   "66 | on the same page | на одній хвилі | phrase | Phrase | Мати спільне розуміння ситуації",
@@ -221,6 +221,5 @@
   "219 | deeply | глибоко | adverb | Adverb | дуже сильно або інтенсивно",
   "220 | next-door | поряд | adverb | Adverb | у сусідньому місці або будинку",
   "221 | along with | разом із | phrase | Phrase | разом з кимось або чимось",
-  "222 | to train | тренуватися | verb | Verb | Немає опису",
-  "223 | since | тому що, по причинні, for the reason that, because | conjunction | Conjunction | тому що; через те що"
+  "222 | since | тому що, по причинні, for the reason that, because | conjunction | Conjunction | тому що; через те що"
 ]

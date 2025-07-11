@@ -14,7 +14,7 @@ const words = {
 
 export default function initVars(localStorageName, lang) {
   vars.lang = lang;
-  vars.wordsInstance = new Dictionary(words[lang]);
+  vars.dictionary = new Dictionary(words[lang]);
   vars.storage = new LocalStorage(localStorageName);
   vars.wordExtraInfoModal = new ModalWindow('.word-extra-info-modal', '.close-button');
   vars.langs = {
@@ -27,14 +27,14 @@ export default function initVars(localStorageName, lang) {
   };
 
   // init favorite words
-  vars.wordsInstance.setFavorites(true, ...(vars.storage.getItem() || []));
+  vars.dictionary.setFavorites(true, ...(vars.storage.getItem() || []));
 
   // fill vars.elements.dictionary.filters
-  vars.wordsInstance.types.forEach((type, index) => {
+  vars.dictionary.types.forEach((type, index) => {
     for (const key_type in vars.filters) {
       vars.filters[key_type][type] = {
         used: false,
-        expression: vars.wordsInstance.types_expression[index],
+        expression: vars.dictionary.types_expression[index],
       };
     }
   });

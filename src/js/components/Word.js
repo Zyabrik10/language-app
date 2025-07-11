@@ -51,7 +51,7 @@ export default function WordComponent(word, index = 0, callback = () => {}) {
   wordButton.appendChild(wordExpressionText);
 
   // <span class="favorite">⭐</span>
-  const isFavorite = vars.wordsInstance.getById(id).favorite;
+  const isFavorite = vars.dictionary.getById(id).favorite;
 
   if (isFavorite) {
     const favSpan = document.createElement("span");

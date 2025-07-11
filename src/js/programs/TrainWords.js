@@ -12,15 +12,15 @@ function foo(word) {
 }
 
 export function initTrainWords() {
-  const typedWords = vars.wordsInstance.getWordsByTypes(
-    vars.wordsInstance.d,
+  const typedWords = vars.dictionary.getWordsByTypes(
+    vars.dictionary.d,
     ...Object.keys(vars.filters.trainWords).map(
       (key) => vars.filters.trainWords[key] && `${key}`
     )
   );
 
   filteredWords =
-    typedWords.length !== 0 ? typedWords : vars.wordsInstance.getFavorites();
+    typedWords.length !== 0 ? typedWords : vars.dictionary.getFavorites();
 
   if (!vars.filters.dictionary.favorite) {
     filteredWords = filteredWords.filter(({ favorite }) => !favorite);
