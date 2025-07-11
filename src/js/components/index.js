@@ -1,3 +1,3 @@
-export { default as WordComponent } from "./WordComponent";
-export { default as FilterComponent } from "./FilterComponent";
-export { default as WordInfoComponent } from "./WordInfoComponent";
+export { default as Word } from "./Word";
+export { default as Filter } from "./Filter";
+export { default as WordInfo } from "./WordInfo";

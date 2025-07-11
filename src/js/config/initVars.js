@@ -1,7 +1,7 @@
-import { Dictionary, LocalStorage } from "../classes";
+import { Dictionary, LocalStorage, ModalWindow } from "../classes";
 // Words import
-import words_array_en from "../../words/en.json";
-import words_array_pl from "../../words/pl.json";
+import words_array_en from "../../dictionary/en.json";
+import words_array_pl from "../../dictionary/pl.json";
 
 import { parseWords } from "../utils";
 import { vars } from "../globalVariables";
@@ -16,6 +16,7 @@ export default function initVars(localStorageName, lang) {
   vars.lang = lang;
   vars.wordsInstance = new Dictionary(words[lang]);
   vars.storage = new LocalStorage(localStorageName);
+  vars.wordExtraInfoModal = new ModalWindow('.word-extra-info-modal', '.close-button');
   vars.langs = {
     en: "English",
     pl: "Polish",
@@ -28,7 +29,7 @@ export default function initVars(localStorageName, lang) {
   // init favorite words
   vars.wordsInstance.setFavorites(true, ...(vars.storage.getItem() || []));
 
-  // fill vars.dictionaryFilters
+  // fill vars.elements.dictionary.filters
   vars.wordsInstance.types.forEach((type, index) => {
     for (const key_type in vars.filters) {
       vars.filters[key_type][type] = {

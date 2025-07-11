@@ -1,14 +1,14 @@
 import { throttle } from "../utils";
 import { elements, vars } from "../globalVariables";
-import { WordComponent } from "../components";
+import { Word } from "../components";
 
 let filteredWords = [];
 let currentWordIndex;
 let inputValue, currentWord;
 
 function foo(word) {
-  elements.trainWordRandomWordElement.innerHTML = "";
-  elements.trainWordRandomWordElement.appendChild(WordComponent(word));
+  elements.trainWords.randomWordElement.innerHTML = "";
+  elements.trainWords.randomWordElement.appendChild(Word(word));
 }
 
 export function initTrainWords() {
@@ -33,20 +33,20 @@ export function initTrainWords() {
 
     currentWord = filteredWords[currentWordIndex].translation.toLowerCase();
 
-    elements.trainWordAllWordsElement.innerHTML = filteredWords.length;
-    elements.trainWordCurrentIndexElement.innerHTML = currentWordIndex + 1;
+    elements.trainWords.wordsElement.innerHTML = filteredWords.length;
+    elements.trainWords.currentIndexElement.innerHTML = currentWordIndex + 1;
 
     foo(filteredWords[currentWordIndex]);
   } else {
-    elements.trainWordAllWordsElement.innerHTML = 0;
-    elements.trainWordCurrentIndexElement.innerHTML = 0;
-    elements.trainWordRandomWordElement.innerHTML = "No words found";
+    elements.trainWords.wordsElement.innerHTML = 0;
+    elements.trainWords.currentIndexElement.innerHTML = 0;
+    elements.trainWords.randomWordElement.innerHTML = "No words found";
   }
 }
 
 export function getNextWord() {
   currentWordIndex = (currentWordIndex + 1) % filteredWords.length;
-  elements.trainWordCurrentIndexElement.innerHTML = currentWordIndex + 1;
+  elements.trainWords.currentIndexElement.innerHTML = currentWordIndex + 1;
   return filteredWords[currentWordIndex];
 }
 

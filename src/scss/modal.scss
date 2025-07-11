@@ -31,23 +31,29 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: var(--color-1);
 
-    .modal-title {
+    .title {
       display: flex;
       align-items: center;
       gap: 10px;
       font-size: 1.5rem;
     }
 
-    .modal-info {
+    .extra-info {
       margin-left: auto;
     }
 
-    .modal-word::first-letter {
+    .info{
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .word::first-letter {
       text-transform: uppercase;
       width: 100%;
     }
 
-    .modal-close-btn {
+    .close-button {
       $size: 50px;
 
       position: absolute;
@@ -62,6 +68,18 @@
 
       font-size: 1.4rem;
       font-weight: bold;
+    }
+
+    .ai-generated-text{
+      font-size: 1.1rem;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .buttons{
+      margin-top: 100px;
+      display: flex;
+      gap: 10px;
     }
   }
 }

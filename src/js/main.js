@@ -1,20 +1,20 @@
 import { elements, vars } from "./globalVariables.js";
 
 import { initTrainWords, TrainWords } from "./programs/index.js";
-import { FilterComponent } from "./components/index.js";
-import { renderFilteredWords } from "./utils/filteredWords.js";
+import { Filter } from "./components/index.js";
+import { renderDictionary } from "./utils";
 
 export function 
 
 main() {
   // === rendering filters ===
-  elements.dictionaryFilters.innerHTML = "";
-  elements.trainWordsFiltersElement.innerHTML = "";
-  elements.dictionaryFilters.appendChild(FilterComponent(vars.filters.dictionary, () => renderFilteredWords(elements.searchInput.value)));
-  elements.trainWordsFiltersElement.appendChild(FilterComponent(vars.filters.trainWords, () => initTrainWords()));
+  elements.dictionary.filters.innerHTML = "";
+   elements.trainWords.filtersElement.innerHTML = "";
+  elements.dictionary.filters.appendChild(Filter(vars.filters.dictionary, () => renderDictionary(elements.dictionary.searchInput.value)));
+   elements.trainWords.filtersElement.appendChild(Filter(vars.filters.trainWords, () => initTrainWords()));
 
   // === Render dictionary && Render words amount === important so filter is initiated
-  renderFilteredWords();
+  renderDictionary();
 
   // === Render practices ===
   TrainWords();

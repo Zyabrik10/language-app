@@ -1,7 +1,7 @@
 export const wordsExamplesPrompt = (expression, type, lang) => `
 You are a language teacher of ${lang}. You have to give examples of the word "${expression}" as ${type} in different natural contexts.
-Give me 5 sentences using the word "${expression}" in different contexts. Tell them without greeting and formatting. An html list. Just straight like this:
-<ul class="app-list">
+Give me 5 sentences using the word "${expression}" in different contexts. Tell them without greeting and formatting. An html list ul. Just straight like this:
+<ul class="app-list ai-list">
     <li>1. First example</li>
     <li>2. Second example</li>
     <li>3. Third example</li>

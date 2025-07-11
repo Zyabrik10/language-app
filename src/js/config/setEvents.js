@@ -2,8 +2,7 @@ import { elements, vars } from "../globalVariables.js";
 // Modules import
 import {
   throttle,
-  renderFilteredWords,
-  openWordModal,
+  renderDictionary,
   aiWritingReviewPrompt,
   wordsExamplesPrompt,
 } from "../utils";
@@ -11,22 +10,14 @@ import { main } from "../main";
 import initVars from "./initVars.js";
 
 export default function setEvents() {
-  // ========== Button which closes modal window ==========
-  elements.closeModalBtn.addEventListener(
-    "click",
-    closeWordModal.bind(null, null, elements.modal, () =>
-      renderFilteredWords.bind(elements.searchInput.value)
-    )
-  );
-
   // ========== Button which adds word to favorite list ==========
-  elements.modalAddBtn.addEventListener("click", addWordToFavorite);
+  elements.wordExtraInfoModal.addFavoriteWordButton.addEventListener("click", addWordToFavorite);
 
   // ========== Input which searches for words ==========
-  elements.searchInput.addEventListener("input", throttle(searchWords, 100));
+  elements.dictionary.searchInput.addEventListener("input", throttle(searchWords, 100));
 
   // ========== Form train writing text ==========
-  elements.trainWritingTextForm.addEventListener("submit", getAITextReview);
+  elements.writingTraining.textForm.addEventListener("submit", getAITextReview);
 
   // ========== Global clicking on word component to render modal window of it ==========
   window.addEventListener("click", handleGlobalViewportClicking);
@@ -37,21 +28,11 @@ export default function setEvents() {
   );
 
   // ========== Renders numbers of words typed ==========
-  elements.trainWritingTextTextArea.addEventListener(
+  elements.writingTraining.textTextArea.addEventListener(
     "input",
     countWordsOnTyping
   );
 }
-
-function closeWordModal(
-  event,
-  modalElement,
-  callback = () => {}
-) {
-  modalElement.classList.remove("active");
-  callback(event);
-}
-
 
 function addWordToFavorite() {
   const id = elements.modalAddBtn.dataset.wordId;
@@ -69,39 +50,38 @@ function addWordToFavorite() {
     elements.modalAddBtn.innerHTML = "Add to Favorite";
   }
 
-  renderFilteredWords();
+  renderDictionary();
 }
 
 function searchWords(event) {
   const searchTerm = event.target.value;
-  renderFilteredWords(searchTerm);
+  renderDictionary(searchTerm);
 }
 
 function getAITextReview(event) {
   event.preventDefault();
-  const text = elements.trainWritingTextForm.train_writing_text_textarea.value;
+  const text = elements.writingTraining.textForm.train_writing_text_textarea.value;
   const prompt = aiWritingReviewPrompt(text, vars.langs[vars.lang]);
 
-  elements.trainWritingTextAiReview.innerHTML = "Loading...";
-  elements.trainWritingTextForm.submit.disabled = true;
+  elements.writingTraining.textAiReview.innerHTML = "Loading...";
+  elements.writingTraining.textForm.submit.disabled = true;
 
   askAI(prompt).then((response) => {
-    elements.trainWritingTextAiReview.innerHTML = response.message.content;
-    elements.trainWritingTextForm.submit.disabled = false;
+    elements.writingTraining.textAiReview.innerHTML = response.message.content;
+    elements.writingTraining.textForm.submit.disabled = false;
   });
 }
 
 function countWordsOnTyping() {
-  elements.trainWritingTextTotalWords.innerText =
-    elements.trainWritingTextTextArea.value.trim().split(" ").length;
+  elements.writingTraining.textTotalWords.innerText =
+    elements.writingTraining.textTextArea.value.trim().split(" ").length;
 }
 
 function changeLanguage() {
   if (this.checked) {
     let lang = this.dataset.lang;
     initVars(
-      `favorite${
-        lang[0].toUpperCase() + lang.split("").splice(1).join("")
+      `favorite${lang[0].toUpperCase() + lang.split("").splice(1).join("")
       }Words`,
       lang
     );
@@ -109,15 +89,35 @@ function changeLanguage() {
   }
 }
 
+function initWordExtraInfo(word) {
+  const isFavoriteWord = vars.wordsInstance.getById(word.id).favorite;
+
+  elements.wordExtraInfoModal.addFavoriteWordButton.dataset.wordId = word.id;
+  elements.wordExtraInfoModal.addFavoriteWordButton.innerText = !isFavoriteWord ? "Add to Favorite" : "Remove from Favorite";
+
+  elements.wordExtraInfoModal.word.innerText = word.expression;
+  
+  elements.wordExtraInfoModal.type.innerText = word.type;
+  elements.wordExtraInfoModal.type.classList.add(word.type);
+  
+  elements.wordExtraInfoModal.wordId.innerText = word.id;
+  
+  elements.wordExtraInfoModal.translation.innerText = word.translation;
+  elements.wordExtraInfoModal.description.innerText = word.description;
+  elements.wordExtraInfoModal.aiGeneratedText.innerHTML = ''; 
+}
+
 function handleGlobalViewportClicking(event) {
   if (event.target.closest(".word-button")) {
     const id = event.target.closest(".word-button").dataset.id;
     const word = vars.wordsInstance.getById(id);
 
-    openWordModal(word);
+    vars.wordExtraInfoModal.showModalWindow(initWordExtraInfo.bind(null, word));
 
-    const modalButtonAiGen = document.querySelector(".modal-button-ai-gen");
-    const modalGenTextEl = document.querySelector(".modal-gen-text");
+    const modalButtonAiGen = document.querySelector(
+      ".ai-text-generation-button"
+    );
+    const modalGenTextEl = document.querySelector(".ai-generated-text");
 
     modalButtonAiGen.addEventListener("click", () => {
       const { expression, type } = word;

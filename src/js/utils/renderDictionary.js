@@ -1,5 +1,5 @@
 import { elements, vars } from "../globalVariables.js";
-import WordComponent from "../components/WordComponent.js";
+import WordComponent from "../components/Word.js";
 
 function getResembledWords(searchTerm) {
   const partsArray = searchTerm.split(",");
@@ -23,7 +23,7 @@ function getResembledWords(searchTerm) {
               ? typedWords
               : vars.wordsInstance.getFavorites();
 
-          if (!vars.filters.dictionary.favorite) {
+          if (!vars.filters.dictionary.favorite.used) {
             favFiltered = favFiltered.filter(({ favorite }) => !favorite);
           }
 
@@ -36,26 +36,11 @@ function getResembledWords(searchTerm) {
   return filteredWords;
 }
 
-export function renderFilteredWords(searchTerm = "") {
+export default function renderDictionary(searchTerm = "") {
   const wordsByPart = getResembledWords(searchTerm);
+  const sortedWords = vars.wordsInstance.getSorted(wordsByPart);
 
-const typedWords = vars.wordsInstance.getWordsByTypes(
-            wordsByPart,
-            ...Object.keys(vars.filters.dictionary).map(
-              (key) => vars.filters.dictionary[key].used && `${key}`
-            )
-          );
-
-  let favFiltered =
-    typedWords.length !== 0 ? typedWords : vars.wordsInstance.getFavorites();
-
-  if (!vars.filters.dictionary.favorite) {
-    favFiltered = favFiltered.filter(({ favorite }) => !favorite);
-  }
-
-  const sortedWords = vars.wordsInstance.getSorted(favFiltered);
-
-  elements.dictionaryListElement.innerHTML = "";
+  elements.dictionary.listElement.innerHTML = "";
 
   const lis = sortedWords.map((word, index) => {
     const li = document.createElement("li");
@@ -63,6 +48,6 @@ const typedWords = vars.wordsInstance.getWordsByTypes(
     return li;
   });
 
-  lis.forEach((li) => elements.dictionaryListElement.appendChild(li));
+  lis.forEach((li) => elements.dictionary.listElement.appendChild(li));
   elements.wordsCountEl.innerHTML = sortedWords.length;
 }

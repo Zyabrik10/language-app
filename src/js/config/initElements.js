@@ -1,22 +1,53 @@
 import { elements } from "../globalVariables";
 
 export default function initElements() {
-  elements.dictionaryListElement = document.querySelector(".dictionary-list");
+  initWordsTrainingElements();
+  initWritingTrainingElements();
+  initWordExtraInfoModal();
+  initDictionary();
+  initOtherElements();
+}
+
+function initWordsTrainingElements() {
+  elements.trainWords = {
+    wordsElement: document.querySelector(".train-word-allWords"),
+    currentIndexElement: document.querySelector(".train-word-currentIndex"),
+    randomWordElement: document.querySelector(".train-word-random-word"),
+    filtersElement: document.querySelector(".train-words-filters"),
+  }
+}
+
+function initWritingTrainingElements(){
+  elements.writingTraining = {
+    textForm: document.querySelector(".train-writing-text-form"),
+    textAiReview: document.querySelector(".train-writing-text-ai-review"),
+    textTotalWords: document.querySelector(".train-writing-text-total-words"),
+    textTextArea: document.querySelector(".train-writing-text-textarea"),
+  };
+}
+
+function initWordExtraInfoModal() {
+  elements.wordExtraInfoModal = {
+    addFavoriteWordButton: document.querySelector(".word-extra-info-modal .add-word-favorite"),
+    word: document.querySelector(".word-extra-info-modal .word"),
+    type: document.querySelector(".word-extra-info-modal .type"),
+    wordId: document.querySelector(".word-extra-info-modal .word-id"),
+    translation: document.querySelector(".word-extra-info-modal .translation"),
+    description: document.querySelector(".word-extra-info-modal .description"),
+    aiGeneratedText: document.querySelector(".word-extra-info-modal .ai-generated-text"),
+  }
+}
+
+function initDictionary() {
+  elements.dictionary = {
+    listElement: document.querySelector(".dictionary-list"),
+    filters: document.querySelector(".dictionary-filters"),
+    searchInput: document.querySelector(".dictionary-input"),
+  }
+}
+
+function initOtherElements() {
   elements.wordsCountEl = document.querySelector(".words-count");
-  elements.searchInput = document.querySelector(".dictionary-input");
-  elements.closeModalBtn = document.querySelector(".modal-close-btn");
-  elements.modalAddBtn = document.querySelector(".modal-add-btn");
-  elements.modal = document.querySelector(".modal");
-  elements.modalContent = document.querySelector(".modal-content");
-  elements.trainWordAllWordsElement = document.querySelector(".train-word-allWords");
-  elements.trainWordCurrentIndexElement = document.querySelector(".train-word-currentIndex");
-  elements.trainWordRandomWordElement = document.querySelector(".train-word-random-word");
-  elements.dictionaryFilters = document.querySelector(".dictionary-filters");
-  elements.trainWordsFiltersElement = document.querySelector(".train-words-filters");
-  elements.trainWritingTextForm = document.querySelector(".train-writing-text-form");
-  elements.trainWritingTextAiReview = document.querySelector(".train-writing-text-ai-review");
   elements.langSwitchers = document.querySelectorAll(".lang-radio-switcher");
-  elements.trainWritingTextTotalWords = document.querySelector(".train-writing-text-total-words");
-  elements.trainWritingTextTextArea = document.querySelector(".train-writing-text-textarea");
   elements.allLinkButtons = document.querySelectorAll(".link-button");
 }
