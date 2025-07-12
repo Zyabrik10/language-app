@@ -10,12 +10,12 @@
 
 .train-writing-text-textarea {
   border-radius: var(--g-b-r);
-  padding: 8px 16px;
+  padding: 0.5em 1em;
   width: 100%;
-  font-size: 16px;
+  font-size: 1em;
   outline: none;
   resize: none;
-  height: 300px;
+  height: 18.75em;
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--color-1);
   color: var(--color-2);
@@ -27,32 +27,34 @@
 }
 
 .train-grammar-test-generate-button {
-  margin-top: 10px;
+  margin-top: 0.625em;
 }
 
 .topic-title {
-  font-size: 20px;
+  font-size: 1.25em;
   font-weight: 600;
 }
 
 .test-list > li > p {
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 600;
 }
 
 .test-list > li > ul {
-  margin-left: 50px;
+  margin-left: 3.15em;
   list-style-type: decimal;
 }
 
 .lang-switcher-list {
-  gap: 10px;
+  gap: 0.625em;
   display: flex;
 }
 
 .lang-switcher {
-  width: 37px;
-  height: 37px;
+  $size: 2.3125em;
+
+  width: $size;
+  height: $size;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -72,7 +74,7 @@
 
 .link-button {
   cursor: pointer;
-  padding: 10px;
+  padding: 0.625em;
 }
 
 .link-button.active {

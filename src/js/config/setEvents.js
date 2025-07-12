@@ -39,7 +39,7 @@ export default function setEvents() {
     countWordsOnTyping
   );
 
-
+  // ========== Button which generate text example for a word ==========
   elements.wordExtraInfoModal.aiTextGenerationButton.addEventListener("click", ({ currentTarget }) => {
     const { expression, type } = vars.dictionary.getById(currentTarget.dataset.id);
     const prompt = wordsExamplesPrompt(expression, type, vars.langs[vars.lang]);
@@ -55,19 +55,19 @@ export default function setEvents() {
 }
 
 function addWordToFavorite() {
-  const id = elements.modalAddBtn.dataset.wordId;
+  const id = elements.wordExtraInfoModal.addFavoriteWordButton.dataset.wordId;
   const isFavoriteWord = vars.dictionary.getById(id).favorite;
 
   if (!isFavoriteWord) {
     vars.dictionary.setFavoriteById(id, true);
     vars.storage.setItem([...(vars.storage.getItem() || []), id]);
-    elements.modalAddBtn.innerHTML = "Remove from Favorite";
+    elements.wordExtraInfoModal.addFavoriteWordButton.innerHTML = "Remove from Favorite";
   } else {
     vars.dictionary.setFavoriteById(id, false);
     vars.storage.setItem(
       vars.storage.getItem().filter(({ fId }) => id === fId)
     );
-    elements.modalAddBtn.innerHTML = "Add to Favorite";
+    elements.wordExtraInfoModal.addFavoriteWordButton.innerHTML = "Add to Favorite";
   }
 
   renderDictionary();

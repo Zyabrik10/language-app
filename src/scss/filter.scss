@@ -34,7 +34,7 @@
   background-color: var(--color-3);
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: 0.625em;
   border-radius: var(--g-b-r);
   text-align: center;
   transition: color var(--g-t);
@@ -45,6 +45,10 @@
 }
 
 /* A BOX FOR HIDING FILTERS */
+
+.dictionary-filters{
+  position: relative;
+}
 
 .filter-list-des-box{
   overflow: hidden;
@@ -64,7 +68,7 @@
   display: flex;
   align-items: center;
   text-align: left;
-  gap: 10px;
+  gap: 0.625em;
 }
 
 .filter-open-close-button > svg{

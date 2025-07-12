@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 1.25em;
   z-index: 100;
 
   transition: opacity var(--g-t);
@@ -22,20 +22,20 @@
 
   hr {
     background-color: currentColor;
-    margin: 10px 0;
+    margin: 0.625em 0;
   }
 
   .container {
     position: relative;
-    border-radius: 4px;
+    border-radius: var(--g-b-r);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: var(--color-1);
 
     .title {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 1.5rem;
+      gap: 0.625em;
+      font-size: 1.5em;
     }
 
     .extra-info {
@@ -43,9 +43,9 @@
     }
 
     .info{
-      gap: 10px;
-      margin-bottom: 10px;
-      font-size: 1.1rem;
+      gap: 0.625em;
+      margin-bottom: 0.625em;
+      font-size: 1.1em;
     }
 
     .word::first-letter {
@@ -54,7 +54,7 @@
     }
 
     .close-button {
-      $size: 50px;
+      $size: 3.125em;
 
       position: absolute;
 
@@ -66,20 +66,19 @@
       width: $size;
       height: $size;
 
-      font-size: 1.4rem;
+      font-size: 1.4em;
       font-weight: bold;
     }
 
     .ai-generated-text{
-      font-size: 1.1rem;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      font-size: 1.1em;
+      margin-top: 1.25em;
     }
 
     .buttons{
-      margin-top: 100px;
+      margin-top: 6.25em;
       display: flex;
-      gap: 10px;
+      gap: 0.625em;
     }
   }
 }
