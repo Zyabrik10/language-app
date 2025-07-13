@@ -68,6 +68,7 @@ export default function FilterComponent(filters, callback = () => {}) {
     // <label for="noun">Noun </label>
     const label = document.createElement("label");
     label.classList.add(filterKey);
+    label.classList.add('app-button');
     label.setAttribute("for", id);
     label.innerText += filters[filterKey].expression + " ";
 

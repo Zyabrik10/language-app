@@ -9,10 +9,12 @@
     "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
+    "firebase": "^11.10.0",
     "parcel": "^2.14.4"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.14.4",
+    "buffer": "^6.0.3",
     "gh-pages": "^6.3.0",
     "scss-reset": "^1.4.6"
   }

@@ -21,7 +21,7 @@ export default function WordComponent(word, index = 0, callback = () => {}) {
     const div = document.createElement("div");
     return div;
   }
-  const { id, type, expression } = word;
+  const { id, type, expression, type_expression } = word;
 
   // <button class="word-button" data-id="1"></button>
   const wordButton = document.createElement("button");
@@ -44,7 +44,7 @@ export default function WordComponent(word, index = 0, callback = () => {}) {
   wordType.classList.add("type");
   wordType.classList.add(type);
 
-  wordType.innerText = type;
+  wordType.innerText = type_expression;
 
 
   wordButton.appendChild(indexSpan);

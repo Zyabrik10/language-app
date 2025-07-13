@@ -107,12 +107,14 @@ section {
 }
 
 .app-button {
+  display: block;
   padding: 0.9375em;
   width: 100%;
   background-color: var(--color-3);
   border-radius: var(--g-b-r);
   transition: background-color var(--g-t);
   color: var(--color-5);
+  cursor: pointer;
 
   &:hover {
     background-color: var(--color-4);

@@ -28,7 +28,7 @@ export default function setEvents() {
   // ========== Global clicking on word component to render modal window of it ==========
   window.addEventListener("click", handleGlobalViewportClicking);
 
-  // ========== Feature changing languages ==========
+  // ========== Switching languages ==========
   elements.langSwitchers.forEach((radioLanguage) =>
     radioLanguage.addEventListener("change", changeLanguage)
   );
@@ -101,12 +101,12 @@ function countWordsOnTyping() {
 function changeLanguage() {
   if (this.checked) {
     let lang = this.dataset.lang;
+    vars.prefLanguage.setItem(lang);
     initVars(
       `favorite${lang[0].toUpperCase() + lang.split("").splice(1).join("")
       }Words`,
       lang
-    );
-    main();
+    ).then(main);
   }
 }
 

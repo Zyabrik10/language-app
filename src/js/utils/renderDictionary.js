@@ -1,5 +1,5 @@
 import { elements, vars } from "../globalVariables.js";
-import WordComponent from "../components/Word.js";
+import { Word } from "../components";
 
 function getResembledWords(searchTerm) {
   const partsArray = searchTerm.split(",");
@@ -44,7 +44,7 @@ export default function renderDictionary(searchTerm = "") {
 
   const lis = sortedWords.map((word, index) => {
     const li = document.createElement("li");
-    li.appendChild(WordComponent(word, index + 1));
+    li.appendChild(Word(word, index + 1));
     return li;
   });
 

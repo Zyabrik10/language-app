@@ -3,8 +3,9 @@ export default class LocalStorage {
     this.storageName = storageName;
   }
 
-  getItem() {
+  getItem(def) {
     const item = localStorage.getItem(this.storageName);
+    if (!item && def) this.setItem(def);
     return item === null ? null : JSON.parse(item);
   }
 
