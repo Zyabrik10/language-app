@@ -6,9 +6,9 @@ let filteredWords = [];
 let currentWordIndex;
 let inputValue, currentWord;
 
-function foo(word) {
+async function foo(word) {
   elements.trainWords.randomWordElement.innerHTML = "";
-  elements.trainWords.randomWordElement.appendChild(Word(word));
+  elements.trainWords.randomWordElement.appendChild(await Word(word));
 }
 
 export function initTrainWords() {

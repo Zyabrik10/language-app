@@ -1,0 +1,31 @@
+.form-add-new-word{
+    gap: 1.25em;
+}
+
+.form-labelx-box{
+    position: relative;
+    display: block;
+
+    .form-label-title{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(1.25em, -50%);
+        transition: transform var(--g-t), top var(--g-t);
+    }
+
+    .form-label-input:not([type=checkbox]){
+        border: 1px solid transparent;
+        transition: border-color var(--g-t);
+        
+        &:focus{
+            border-color: var(--good);
+        }
+
+        &:focus + .form-label-title{
+            top: 0;
+            transform: translate(1.25em, -100%) scale(0.8);
+        }
+    }
+
+}

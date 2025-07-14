@@ -8,10 +8,13 @@ export default class Dictionary {
         this.types_expression.push(word.type_expression);
       }
 
-      return {
+
+      if (!word.favorite) return {
         ...word,
         favorite: false,
       };
+
+      return word;
     });
   }
 

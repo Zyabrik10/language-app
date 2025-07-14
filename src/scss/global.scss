@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap");
 
 body {
   font-family: "Fira Sans", sans-serif;
@@ -8,26 +8,26 @@ body {
   color: var(--color-2);
 }
 
-@media screen and (min-width: 400px){
-  body{
+@media screen and (min-width: 400px) {
+  body {
     font-size: 12px;
   }
 }
 
-@media screen and (min-width: 400px){
-  body{
+@media screen and (min-width: 400px) {
+  body {
     font-size: 14px;
   }
 }
 
-@media screen and (min-width: 600px){
-  body{
+@media screen and (min-width: 600px) {
+  body {
     font-size: 14px;
   }
 }
 
-@media screen and (min-width: 1000px){
-  body{
+@media screen and (min-width: 1000px) {
+  body {
     font-size: 16px;
   }
 }
@@ -101,7 +101,7 @@ section {
   flex-direction: column;
 }
 
-.ai-list{
+.ai-list {
   list-style-type: decimal;
   margin-left: 1.125em;
 }
@@ -116,15 +116,25 @@ section {
   color: var(--color-5);
   cursor: pointer;
 
-  &:hover {
+  &.red {
+    color: white;
+    background-color: var(--error);
+  }
+  &.green {
+    color: white;
+    background-color: var(--good);
+  }
+
+  &:hover,
+  &:disabled {
     background-color: var(--color-4);
   }
 
   &:disabled {
-    background-color: var(--color-4);
     cursor: not-allowed;
   }
 }
+
 
 .flex-container {
   --flex-items: 1;
@@ -135,6 +145,9 @@ section {
   flex-wrap: wrap;
 
   li {
-    flex-basis: calc((100% - (var(--flex-items) - 1) * var(--flex-items-gap)) / var(--flex-items));
+    flex-basis: calc(
+      (100% - (var(--flex-items) - 1) * var(--flex-items-gap)) /
+        var(--flex-items)
+    );
   }
 }

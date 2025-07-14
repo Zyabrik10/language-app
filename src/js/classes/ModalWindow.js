@@ -21,12 +21,12 @@ export default class ModalWindow {
         this.hideModalWindowOnEscapeEnv = this.hideModalWindowOnEscape.bind(this);
 
     }
-3
-    hideModalWindow(callback = () => { }) {
+    
+    hideModalWindow(callback) {
         this.mw.classList.remove('active');
         window.removeEventListener('keydown', this.hideModalWindowOnEscapeEnv);
         document.documentElement.style.overflow = 'auto';
-        callback();
+        callback?.();
     }
 
     hideModalWindowOnEscape({ key }) {
@@ -42,6 +42,6 @@ export default class ModalWindow {
 
         document.documentElement.style.overflow = 'hidden';
 
-        callback();
+        callback?.();
     }
 }

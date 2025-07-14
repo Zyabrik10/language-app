@@ -51,4 +51,9 @@ function initOtherElements() {
   elements.wordsCountEl = document.querySelector(".words-count");
   elements.langSwitchers = document.querySelectorAll(".lang-radio-switcher");
   elements.allLinkButtons = document.querySelectorAll(".link-button");
+  elements.deleteAllWordsModalOpenButton = document.querySelector(".delete-all-words-modal-open-button");
+  elements.deleteAllWordsButton = document.querySelector(".delete-all-words-button");
+  elements.addWordModalButton = document.querySelector(".add-word-modal-open-button");
+  elements.deleteWordButton = document.querySelector(".delete-word-button");
+  elements.formAddNewWord = document.querySelector(".form-add-new-word");
 }
