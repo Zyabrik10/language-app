@@ -7,38 +7,33 @@
   gap: 5px;
 }
 
-.word-button {
+.dictionary-word-button {
   user-select: none;
   text-align: left;
   display: flex;
-}
 
-.word-button .index{
-  margin-right: 15px;
-}
-
-.word-button .expression{
-  user-select: all;
-  color: var(--color-2);
-
-  &::first-letter{
-    text-transform: capitalize;
-    font-weight: 600;
+  .index {
+    margin-right: 15px;
   }
-}
 
-.word-button .type{
-  margin-left: auto;
-  display: none;
-}
+  .expression {
+    user-select: all;
+    color: var(--color-2);
 
-@media screen and (min-width: 100px){
-  .word-button .type{
-    display: block;
-  } 
-}
+    &::first-letter {
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+  }
 
-.word-button .id{
-  margin-left: auto;
-  margin-right: 0;
+  .type {
+    margin-left: auto;
+    display: none;
+
+    @media screen and (min-width: 300px) {
+      & {
+        display: block;
+      }
+    }
+  }
 }

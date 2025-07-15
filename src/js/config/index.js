@@ -10,14 +10,14 @@ export async function config() {
 
   // pre init pref-language
   vars.prefLanguage = new LocalStorage("pref-lang");
-  const lang = vars.prefLanguage.getItem("pl");
+  const lang = vars.prefLanguage.getItem("en");
 
   elements.langSwitchers.forEach((e) => {
     if (e.dataset.lang !== lang) return;
     e.checked = true;
   });
-  // /pre init pref-language
 
+  // /pre init pref-language
   await initVars(
     `favorite${lang[0].toUpperCase() + lang.split("").splice(1).join("")}Words`,
     lang

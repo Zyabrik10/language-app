@@ -7,7 +7,7 @@ import { vars } from "../globalVariables";
  */
 
 /*
-<button class="word-button" data-id="1">
+<button class="dictionary-word-button" data-id="1">
   <span class="index">1</span>
   <span class="expression">word</span>
   <span class="favorite">⭐</span>
@@ -15,7 +15,7 @@ import { vars } from "../globalVariables";
 </button>
 */
 
-export default function WordComponent(word, index = 0, callback = () => {}) {
+export default function Word(word, index = 0, callback = () => {}) {
   // HOT FIX
   if (!word) {
     const div = document.createElement("div");
@@ -23,10 +23,11 @@ export default function WordComponent(word, index = 0, callback = () => {}) {
   }
   const { id, type, expression, type_expression } = word;
 
-  // <button class="word-button" data-id="1"></button>
+  // <button class="dictionary-word-button" data-id="1"></button>
   const wordButton = document.createElement("button");
-  wordButton.classList.add("word-button");
+  wordButton.classList.add("dictionary-word-button");
   wordButton.classList.add("app-button");
+  wordButton.classList.add("full-width");
   wordButton.dataset.id = id;
 
   // <span class="index">1</span>

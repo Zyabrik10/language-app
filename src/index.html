@@ -87,12 +87,12 @@
           <div class="container">
             <ul class="flex-container" style="--flex-items: 2">
               <li>
-                <button class="app-button add-word-modal-open-button">
+                <button class="app-button add-word-modal-open-button full-width">
                   Add Word
                 </button>
               </li>
               <li>
-                <button class="app-button delete-all-words-modal-open-button">
+                <button class="app-button delete-all-words-modal-open-button full-width">
                   Delete All
                 </button>
               </li>
@@ -113,7 +113,7 @@
         <section>
           <div class="container">
             <div class="sub-container">
-              <p class="title no-top">Train Words</p>
+              <h2 class="title no-top">Train Words</h2>
               <p class="description">
                 Write a translation of the word below. Your task is to write
                 correct translation for all words.
@@ -137,7 +137,7 @@
 
             <!-- Train Writing Text -->
             <div class="sub-container">
-              <p class="title">Train Writing Text</p>
+              <h2 class="title">Train Writing Text</h2>
               <p class="description">Train Writing Text on a specific topic.</p>
               <form class="train-writing-text-form">
                 <textarea
@@ -160,6 +160,32 @@
     <!-- /MAIN -->
 
     <!-- MODALS -->
+    <div class="modal editing-word-modal">
+      <div class="container">
+        <button class="close-button">&times;</button>
+        <div class="content">
+          <div class="editing-word-modal-list app-list flex-container">
+            <input class="edit-word app-input" type="text"/>
+            <input class="edit-type app-input"></input>
+            <input class="edit-type-expression app-input"></input>
+          </div>
+          <hr class="line" />
+          <div class="info sub-container">
+            <input class="edit-translation app-input" />
+            <input class="edit-description app-input" />
+          </div>
+          <div class="buttons">
+            <button class="cancel-editing-word-button app-button full-width">
+              Cancel Editing
+            </button>
+            <button class="apply-editing-word-button app-button full-width">
+              Apply Edit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="modal word-extra-info-modal">
       <div class="container">
         <button class="close-button">&times;</button>
@@ -177,16 +203,16 @@
           </div>
           <div class="ai-generated-text"></div>
           <div class="buttons">
-            <button class="ai-text-generation-button app-button">
+            <button class="ai-text-generation-button app-button full-width">
               Give me examples
             </button>
-            <button class="add-word-favorite app-button">
+            <button class="add-word-favorite app-button full-width">
               Add to Favorite
             </button>
-            <button class="delete-word-button app-button">
+            <button class="delete-dictionary-word-button app-button full-width">
               Delete Word
             </button>
-            <button class="delete-word-button app-button">
+            <button class="open-editing-dictionary-word-modal-button app-button full-width">
               Edit Word
             </button>
           </div>
@@ -199,23 +225,23 @@
         <button class="close-button">&times;</button>
         <div class="content">
           <form class="form-add-new-word container" action="">
-            <label class="form-labelx-box" for="expression-input" aria-label="expression-input">
+            <label class="form-label-box" for="expression-input" aria-label="expression-input">
               <input class="form-label-input app-input" type="text" id="expression-input" name="expressionInput" />
               <span class="form-label-title">Expression</span>
             </label>
-            <label class="form-labelx-box" for="translation-input" aria-label="translation-input">
+            <label class="form-label-box" for="translation-input" aria-label="translation-input">
               <input class="form-label-input app-input" type="text" id="translation-input" name="translationInput" />
               <span class="form-label-title">Translation</span>
             </label>
-            <label class="form-labelx-box" for="type-input" aria-label="expression-input">
+            <label class="form-label-box" for="type-input" aria-label="expression-input">
               <input class="form-label-input app-input" type="text" id="type-input" name="typeInput"/>
               <span class="form-label-title">Type</span>
             </label>
-            <label class="form-labelx-box" for="type-expression-input" aria-label="expression-input">
+            <label class="form-label-box" for="type-expression-input" aria-label="expression-input">
               <input class="form-label-input app-input" type="text" id="type-expression-input" name="typeExpressionInput" />
               <span class="form-label-title">Type expression</span>
             </label>
-            <label class="form-labelx-box" for="description-input" aria-label="description-input">
+            <label class="form-label-box" for="description-input" aria-label="description-input">
               <input class="form-label-input app-input" type="text" id="description-input" name="descriptionInput"/>
               <span class="form-label-title">Description</span>
             </label>
@@ -223,7 +249,7 @@
               <span class="form-label-title">Is your Favorite</span>
               <input class="form-label-input" type="checkbox" id="favorite-checkbox" name="favoriteInput"/>
             </label>
-            <button class="app-button green">Add</button>
+            <button class="app-button green full-width">Add</button>
           </form>
         </div>
       </div>
@@ -235,7 +261,7 @@
         <div class="content">
           <p style="text-align: center; margin-bottom: 20px;">Do you really want to delete all words from THIS dictionary?</p>
           <p style="text-align: center; margin-bottom: 50px;">You won't be able to restore them</p>
-            <button class="delete-all-words-button app-button red">
+            <button class="delete-all-words-button app-button red full-width">
               Delete All
             </button>
         </div>

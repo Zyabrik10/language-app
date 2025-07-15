@@ -1,108 +1,14 @@
 @use 'scss-reset/reset';
+@use './reset-normalize.scss';
 @use "./variables.scss";
-@use "./global.scss";
 @use "./scroll.scss";
+@use "./global.scss";
 @use "./header.scss";
-@use "./modal.scss";
-@use "./mod-colors.scss";
+@use "./modals";
+@use "./training";
+@use "./type-colors.scss";
 @use "./dictionary.scss";
 @use "./filter.scss";
 @use "./form.scss";
-
-.train-writing-text-textarea {
-  border-radius: var(--g-b-r);
-  padding: 0.5em 1em;
-  width: 100%;
-  font-size: 1em;
-  outline: none;
-  resize: none;
-  height: 18.75em;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--color-1);
-  color: var(--color-2);
-  border: 1px solid var(--color-5);
-}
-
-.train-word-input:focus {
-  outline: none;
-}
-
-.train-grammar-test-generate-button {
-  margin-top: 0.625em;
-}
-
-.topic-title {
-  font-size: 1.25em;
-  font-weight: 600;
-}
-
-.test-list > li > p {
-  font-size: 1em;
-  font-weight: 600;
-}
-
-.test-list > li > ul {
-  margin-left: 3.15em;
-  list-style-type: decimal;
-}
-
-.lang-switcher-list {
-  gap: 0.625em;
-  display: flex;
-}
-
-.lang-switcher {
-  $size: 2.3125em;
-
-  width: $size;
-  height: $size;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.lang-radio-switcher {
-  visibility: hidden;
-  width: 0;
-  height: 0;
-  position: absolute;
-}
-
-.lang-radio-switcher:checked ~ .lang-switcher {
-  background-color: var(--color-6);
-}
-
-.link-button {
-  cursor: pointer;
-  padding: 0.625em;
-}
-
-.link-button.active {
-  background-color: var(--color-6);
-  border-radius: var(--g-b-r);
-}
-
-.page-radio-button {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-}
-
-.page-radio-button + .page {
-  position: absolute;
-  transform: scale(0);
-  top: 0;
-  left: 0;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.page-radio-button:checked + .page {
-  transform: scale(1);
-  position: static;
-  opacity: 1;
-  pointer-events: all;
-  transition: opacity 0.5s ease;
-}
+@use "./page-switching.scss";
+@use "./lang-switcher.scss";

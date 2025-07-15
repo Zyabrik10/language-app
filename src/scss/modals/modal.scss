@@ -31,28 +31,6 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: var(--color-1);
 
-    .title {
-      display: flex;
-      align-items: center;
-      gap: 0.625em;
-      font-size: 1.5em;
-    }
-
-    .extra-info {
-      margin-left: auto;
-    }
-
-    .info{
-      gap: 0.625em;
-      margin-bottom: 0.625em;
-      font-size: 1.1em;
-    }
-
-    .word::first-letter {
-      text-transform: uppercase;
-      width: 100%;
-    }
-
     .close-button {
       $size: 3.125em;
 
@@ -70,12 +48,7 @@
       font-weight: bold;
     }
 
-    .ai-generated-text{
-      font-size: 1.1em;
-      margin-top: 1.25em;
-    }
-
-    .buttons{
+    .buttons {
       margin-top: 6.25em;
       display: flex;
       gap: 0.625em;

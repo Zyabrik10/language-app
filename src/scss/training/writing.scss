@@ -1,0 +1,17 @@
+.train-writing-text-textarea {
+  border-radius: var(--g-b-r);
+  padding: 0.5em 1em;
+  width: 100%;
+  font-size: 1em;
+  outline: none;
+  resize: none;
+  height: 18.75em;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-1);
+  color: var(--color-2);
+  border: 1px solid var(--color-5);
+}
+
+.train-word-input:focus {
+  outline: none;
+}

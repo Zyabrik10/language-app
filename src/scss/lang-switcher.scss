@@ -1,0 +1,26 @@
+.lang-switcher-list {
+  display: flex;
+  gap: 0.625em;
+}
+
+.lang-switcher {
+  $size: 2.3125em;
+
+  width: $size;
+  height: $size;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang-radio-switcher {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.lang-radio-switcher:checked ~ .lang-switcher {
+  background-color: var(--color-6);
+}

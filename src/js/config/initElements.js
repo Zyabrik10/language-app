@@ -5,7 +5,20 @@ export default function initElements() {
   initWritingTrainingElements();
   initWordExtraInfoModal();
   initDictionary();
+  initEditingWordModal();
   initOtherElements();
+}
+
+function initEditingWordModal(){
+  elements.initEditingWordModal = {
+    editWordInput: document.querySelector('.edit-word'),
+    editTypeInput: document.querySelector('.edit-type'),
+    editTypeExpressionInput: document.querySelector('.edit-type-expression'),
+    editTranslationInput: document.querySelector('.edit-translation'),
+    editDescriptionInput: document.querySelector('.edit-description'),
+    cancelEditingWordButton: document.querySelector('.cancel-editing-word-button'),
+    applyEditingWordButton: document.querySelector('.apply-editing-word-button'),
+  }
 }
 
 function initWordsTrainingElements() {
@@ -36,6 +49,7 @@ function initWordExtraInfoModal() {
     description: document.querySelector(".word-extra-info-modal .description"),
     aiGeneratedText: document.querySelector(".word-extra-info-modal .ai-generated-text"),
     aiTextGenerationButton: document.querySelector(".word-extra-info-modal .ai-text-generation-button"),
+    openEditingDictionaryWordModalButton: document.querySelector(".open-editing-dictionary-word-modal-button")
   }
 }
 
@@ -54,6 +68,6 @@ function initOtherElements() {
   elements.deleteAllWordsModalOpenButton = document.querySelector(".delete-all-words-modal-open-button");
   elements.deleteAllWordsButton = document.querySelector(".delete-all-words-button");
   elements.addWordModalButton = document.querySelector(".add-word-modal-open-button");
-  elements.deleteWordButton = document.querySelector(".delete-word-button");
+  elements.deleteWordButton = document.querySelector(".delete-dictionary-word-button");
   elements.formAddNewWord = document.querySelector(".form-add-new-word");
 }

@@ -32,35 +32,25 @@ body {
   }
 }
 
-button,
-a,
-hr,
-span {
-  color: currentColor;
-  font-size: inherit;
-}
+section h2.title {
+  position: relative;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.625em;
+  margin-top: 3.125em;
 
-section {
-  .title {
-    position: relative;
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 0.625em;
-    margin-top: 3.125em;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.125em;
+    background-color: rgba(255, 255, 255, 0.3);
+    bottom: -0.3125em;
+    left: 0;
+  }
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 0.125em;
-      background-color: rgba(255, 255, 255, 0.3);
-      bottom: -0.3125em;
-      left: 0;
-    }
-
-    &.no-top {
-      margin-top: 0;
-    }
+  &.no-top {
+    margin-top: 0;
   }
 }
 
@@ -81,7 +71,7 @@ section {
 }
 
 .app-input {
-  background-color: #12131a;
+  background-color: var(--color-8);
   border-radius: var(--g-b-r);
   padding: 1em;
   width: 100%;
@@ -99,22 +89,25 @@ section {
   display: flex;
   gap: 0.625em;
   flex-direction: column;
-}
 
-.ai-list {
-  list-style-type: decimal;
-  margin-left: 1.125em;
+  &.decimal {
+    list-style-type: decimal;
+    margin-left: 1.125em;
+  }
 }
 
 .app-button {
   display: block;
-  padding: 0.9375em;
-  width: 100%;
+  padding: 0.9em;
   background-color: var(--color-3);
   border-radius: var(--g-b-r);
   transition: background-color var(--g-t);
   color: var(--color-5);
   cursor: pointer;
+
+  &.full-width {
+    width: 100%;
+  }
 
   &.red {
     color: white;
@@ -135,7 +128,6 @@ section {
   }
 }
 
-
 .flex-container {
   --flex-items: 1;
   --flex-items-gap: 1.5625em;
@@ -144,7 +136,7 @@ section {
   gap: var(--flex-items-gap);
   flex-wrap: wrap;
 
-  li {
+  > * {
     flex-basis: calc(
       (100% - (var(--flex-items) - 1) * var(--flex-items-gap)) /
         var(--flex-items)

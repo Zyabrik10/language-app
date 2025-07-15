@@ -1,0 +1,28 @@
+.word-extra-info-modal {
+  .ai-generated-text {
+    font-size: 1.1em;
+    margin-top: 1.25em;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 0.625em;
+    font-size: 1.5em;
+  }
+
+  .extra-info {
+    margin-left: auto;
+  }
+
+  .info {
+    gap: 0.625em;
+    margin-bottom: 0.625em;
+    font-size: 1.1em;
+  }
+
+  .word::first-letter {
+    text-transform: uppercase;
+    width: 100%;
+  }
+}

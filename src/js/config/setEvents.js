@@ -117,11 +117,11 @@ export default function setEvents() {
     const lang = vars.lang;
     await addNewWord(lang, newWord);
 
-    expressionInput.value = '';
-    typeInput.value = '';
-    typeExpressionInput.value = '';
-    descriptionInput.value = '';
-    translationInput.value = '';
+    expressionInput.value = "";
+    typeInput.value = "";
+    typeExpressionInput.value = "";
+    descriptionInput.value = "";
+    translationInput.value = "";
     favoriteInput.checked = false;
 
     vars.addNewWordModal.hideModalWindow();
@@ -161,6 +161,78 @@ export default function setEvents() {
       lang
     ).then(main);
   });
+
+  // ========== Open Editing Dictionary Word Modal ==========
+  elements.wordExtraInfoModal.openEditingDictionaryWordModalButton.addEventListener(
+    "click",
+    () => {
+      vars.editingWordModal.showModalWindow(() => {
+        const id =
+          elements.wordExtraInfoModal.openEditingDictionaryWordModalButton
+            .dataset.wordId;
+        const word = vars.dictionary.getById(id);
+        elements.initEditingWordModal.editWordInput.value = word.expression;
+        elements.initEditingWordModal.editTypeInput.value = word.type;
+        elements.initEditingWordModal.editTranslationInput.value =
+          word.translation;
+        elements.initEditingWordModal.editTypeExpressionInput.value =
+          word.type_expression;
+        elements.initEditingWordModal.editDescriptionInput.value =
+          word.description;
+        elements.initEditingWordModal.cancelEditingWordButton.dataset.wordId =
+          id;
+        elements.initEditingWordModal.applyEditingWordButton.dataset.wordId =
+          id;
+      });
+      vars.wordExtraInfoModal.hideModalWindow();
+    }
+  );
+
+  // ========== Open Editing Dictionary Word Modal ==========
+  elements.initEditingWordModal.cancelEditingWordButton.addEventListener(
+    "click",
+    () => {
+      const id =
+        elements.initEditingWordModal.cancelEditingWordButton.dataset.wordId;
+      const word = vars.dictionary.getById(id);
+
+      vars.editingWordModal.hideModalWindow();
+      vars.wordExtraInfoModal.showModalWindow(
+        initWordExtraInfo.bind(null, word)
+      );
+    }
+  );
+
+  // ========== Open Editing Dictionary Word Modal ==========
+  elements.initEditingWordModal.applyEditingWordButton.addEventListener(
+    "click",
+    async () => {
+      const id =
+        elements.initEditingWordModal.applyEditingWordButton.dataset.wordId;
+      const updatedWord = {
+        expression: elements.initEditingWordModal.editWordInput.value.trim(),
+        translation:
+          elements.initEditingWordModal.editTranslationInput.value.trim(),
+        type: elements.initEditingWordModal.editTypeInput.value.trim(),
+        type_expression:
+          elements.initEditingWordModal.editTypeExpressionInput.value.trim(),
+        description:
+          elements.initEditingWordModal.editDescriptionInput.value.trim(),
+      };
+      elements.initEditingWordModal.applyEditingWordButton.disabled = true;
+      await updateWord(vars.lang, id, updatedWord);
+      vars.dictionary.updateWordById(id, updatedWord);
+      elements.initEditingWordModal.applyEditingWordButton.disabled = false;
+
+      let lang = vars.lang;
+      initVars(
+        `favorite${
+          lang[0].toUpperCase() + lang.split("").splice(1).join("")
+        }Words`,
+        lang
+      ).then(main);
+    }
+  );
 }
 
 async function addWordToFavorite() {
@@ -235,6 +307,8 @@ function initWordExtraInfo(word) {
 
   elements.wordExtraInfoModal.aiTextGenerationButton.dataset.id = word.id;
   elements.wordExtraInfoModal.addFavoriteWordButton.dataset.wordId = word.id;
+  elements.wordExtraInfoModal.openEditingDictionaryWordModalButton.dataset.wordId =
+    word.id;
   elements.deleteWordButton.dataset.wordId = word.id;
   elements.wordExtraInfoModal.addFavoriteWordButton.innerText = !isFavoriteWord
     ? "Add to Favorite"
@@ -253,8 +327,8 @@ function initWordExtraInfo(word) {
 }
 
 function handleGlobalViewportClicking(event) {
-  if (event.target.closest(".word-button")) {
-    const id = event.target.closest(".word-button").dataset.id;
+  if (event.target.closest(".dictionary-word-button")) {
+    const id = event.target.closest(".dictionary-word-button").dataset.id;
     const word = vars.dictionary.getById(id);
 
     vars.wordExtraInfoModal.showModalWindow(initWordExtraInfo.bind(null, word));

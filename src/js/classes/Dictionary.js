@@ -101,4 +101,13 @@ export default class Dictionary {
     this.d = this.d.filter(({ id }) => removeWordId !== id);
     return this;
   }
+
+  updateWordById(wordId, updatedWord){
+    const word = this.getById(wordId);
+    word.expression = updatedWord.expression;
+    word.translation = updatedWord.translation;
+    word.description = updatedWord.description;
+    word.type = updatedWord.type;
+    word.type_expression = updatedWord.type_expression;
+  }
 }

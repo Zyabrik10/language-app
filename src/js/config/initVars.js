@@ -25,6 +25,7 @@ export default async function initVars(localStorageName, lang) {
   vars.wordExtraInfoModal = new ModalWindow('.word-extra-info-modal', '.close-button');
   vars.deleteAllWordsWarningModal = new ModalWindow('.delete-all-words-warning-modal', '.close-button');
   vars.addNewWordModal = new ModalWindow('.add-word-modal', '.close-button');
+  vars.editingWordModal = new ModalWindow('.editing-word-modal', '.close-button');
   vars.langs = {
     en: "English",
     pl: "Polish",
