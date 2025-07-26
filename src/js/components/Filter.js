@@ -63,21 +63,21 @@ export default function FilterComponent(filters, callback = () => {}) {
   for (const filterKey in filters) {
     // <li></li>
     const li = document.createElement("li");
-    const id = filterKey + c;
+    const id = (filterKey || 'undefined') + c;
 
     // <label for="noun">Noun </label>
     const label = document.createElement("label");
-    label.classList.add(filterKey);
+    label.classList.add(filterKey || 'undefined');
     label.classList.add('app-button');
     label.setAttribute("for", id);
-    label.innerText += filters[filterKey].expression + " ";
+    label.innerText += filters[filterKey || 'undefined'].expression + " ";
 
     // <input type="checkbox" checked id="noun" name="noun">
     const input = document.createElement("input");
     input.type = "checkbox";
     input.checked = true;
     input.id = id;
-    input.name = filterKey;
+    input.name = filterKey || 'undefined';
 
     // <li><label for="noun">Noun <input type="checkbox" checked id="noun" name="noun"></label></li>
     li.appendChild(input);
