@@ -31,7 +31,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: var(--color-1);
 
-    .close-button {
+    button[data-role="close"].close-button {
       $size: 3.125em;
 
       position: absolute;

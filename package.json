@@ -2,13 +2,14 @@
   "version": "1.0.0",
   "description": "The learning English app",
   "author": "Zyabrik10",
-  "source": "src/index.html",
+  "source": "src/index.ejs",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build src/index.html --public-url ./",
+    "build": "parcel build src/index.ejs --public-url ./",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
+    "ejs": "^3.1.10",
     "firebase": "^11.10.0",
     "parcel": "^2.14.4"
   },
@@ -16,6 +17,7 @@
     "@parcel/transformer-sass": "^2.14.4",
     "buffer": "^6.0.3",
     "gh-pages": "^6.3.0",
+    "parcel-transformer-ejs": "^1.0.1",
     "scss-reset": "^1.4.6"
   }
 }

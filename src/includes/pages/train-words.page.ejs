@@ -1,0 +1,53 @@
+<input
+  type="radio"
+  id="training"
+  name="pages"
+  class="page-radio-button"
+/>
+<div class="page">
+  <!-- TRAIN WORDS-->
+  <section>
+    <div class="container">
+      <div class="sub-container">
+        <h2 class="title no-top">Train Words</h2>
+        <p class="description">
+          Write a translation of the word below. Your task is to write
+          correct translation for all words.
+        </p>
+        <span class="train-word-random-word"></span>
+        <p>
+          <span class="train-word-currentIndex">0</span>/<span
+            class="train-word-allWords"
+            >0</span
+          >
+        </p>
+        <div class="train-words-filters"></div>
+        <form class="train-word-form" action="">
+          <input
+            type="text"
+            class="train-word-input app-input"
+            placeholder="translation"
+          />
+        </form>
+      </div>
+      <!-- Train Writing Text -->
+      <div class="sub-container">
+        <h2 class="title">Train Writing Text</h2>
+        <p class="description">Train Writing Text on a specific topic.</p>
+        <form class="train-writing-text-form">
+          <textarea
+            class="train-writing-text-textarea"
+            name="train_writing_text_textarea"
+          ></textarea>
+          <button class="app-button" name="submit">submit</button>
+        </form>
+        <p>
+          Total Words:
+          <span class="train-writing-text-total-words">0</span>
+        </p>
+        <p class="train-writing-text-ai-review"></p>
+      </div>
+    </div>
+  </section>
+  <!-- /TRAIN WORDS-->
+</div>

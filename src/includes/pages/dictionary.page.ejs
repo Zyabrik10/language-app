@@ -1,0 +1,41 @@
+<input
+  type="radio"
+  id="dictionary"
+  name="pages"
+  class="page-radio-button"
+  checked
+/>
+<div class="page">
+  <!-- DICTIONARY -->
+  <section>
+    <div class="container">
+      <div class="sub-container">
+        <input
+          class="app-input dictionary-input"
+          type="text"
+          placeholder="intercept, intercepting, intercepted, ..."
+        />
+        <div class="dictionary-filters"></div>
+        <p>Total Words: <span class="words-count">0</span></p>
+        <ul class="dictionary-list"></ul>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <ul class="flex-container" style="--flex-items: 2">
+        <li>
+          <button class="app-button full-width" data-modal-id="add-word">
+            Add Word
+          </button>
+        </li>
+        <li>
+          <button class="app-button full-width" data-modal-id="delete-all-words-warning">
+            Delete All
+          </button>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- /DICTIONARY -->
+</div>

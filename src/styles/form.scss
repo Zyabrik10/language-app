@@ -18,11 +18,13 @@
         border: 1px solid transparent;
         transition: border-color var(--g-t);
         
-        &:focus{
+        &:focus,
+        &.active{
             border-color: var(--good);
         }
 
-        &:focus + .form-label-title{
+        &:focus + .form-label-title,
+        &.active + .form-label-title{
             top: 0;
             transform: translate(1.25em, -100%) scale(0.8);
         }

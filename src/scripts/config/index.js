@@ -1,5 +1,5 @@
-import { LocalStorage } from "../classes";
-import { elements, vars } from "../globalVariables";
+import { elements } from "../globalVariables";
+import { localStorageGetItem } from "../utils/localStorage";
 
 import initElements from "./initElements";
 import initVars from "./initVars";
@@ -9,8 +9,7 @@ export async function config() {
   initElements();
 
   // pre init pref-language
-  vars.prefLanguage = new LocalStorage("pref-lang");
-  const lang = vars.prefLanguage.getItem("en");
+  const lang = localStorageGetItem("pref-lang", 'en');
 
   elements.langSwitchers.forEach((e) => {
     if (e.dataset.lang !== lang) return;
