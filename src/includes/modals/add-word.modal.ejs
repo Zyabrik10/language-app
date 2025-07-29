@@ -3,27 +3,32 @@
     <button class="close-button" data-role="close">&times;</button>
     <div class="content">
       <form class="form-add-new-word container" action="">
-        <label class="form-label-box" for="expression-input" aria-label="expression-input">
+        <label class="form-label-box" for="expression-input" aria-label="expression-input" style="display: flex; gap: 10px;">
           <input class="form-label-input app-input" type="text" id="expression-input" name="expressionInput" />
           <span class="form-label-title">Expression</span>
+          <button class="app-button" data-role="translate" type="button">Translate</button>
         </label>
-        <label class="form-label-box" for="translation-input" aria-label="translation-input">
+        <label class="form-label-box" for="translation-input" aria-label="translation-input" style="display: flex; gap: 10px;">
           <input class="form-label-input app-input" type="text" id="translation-input" name="translationInput" />
           <span class="form-label-title">Translation</span>
+          <button class="app-button" data-role="fillTranslationAI" type="button" style="flex-shrink: 0;">Fill by AI</button>
         </label>
-        <label class="form-label-box" for="type-input" aria-label="expression-input" style="display: flex;">
+        <label class="form-label-box" for="type-input" aria-label="expression-input" style="display: flex; gap: 10px;">
           <input class="form-label-input app-input" type="text" id="type-input" name="typeInput"/>
           <span class="form-label-title">Type</span>
           <select data-type="select-type" name="" id=""></select>
+          <button class="app-button" data-role="fillTypeAI" type="button" style="flex-shrink: 0;">Fill by AI</button>
         </label>
-        <label class="form-label-box" for="type-expression-input" aria-label="expression-input" style="display: flex;">
+        <label class="form-label-box" for="type-expression-input" aria-label="expression-input" style="display: flex; gap: 10px;">
           <input class="form-label-input app-input" type="text" id="type-expression-input" name="typeExpressionInput" />
           <span class="form-label-title">Type expression</span>
-          <select data-type="select-type-expression" name="" id=""></select>
+          <select data-type="select-type-expression" id=""></select>
+          <button class="app-button" data-role="fillTypeExpressionAI" type="button" style="flex-shrink: 0;">Fill by AI</button>
         </label>
-        <label class="form-label-box" for="description-input" aria-label="description-input">
-          <input class="form-label-input app-input" type="text" id="description-input" name="descriptionInput"/>
+        <label class="form-label-box" for="description-input" aria-label="description-input" style="display: flex; gap: 10px;">
+          <textarea class="form-label-input app-input" type="text" id="description-input" name="descriptionInput"></textarea>
           <span class="form-label-title">Description</span>
+          <button class="app-button" data-role="fillDescriptionAI" type="button" style="flex-shrink: 0;">Fill by AI</button>
         </label>
         <label class="" for="favorite-checkox" aria-label="favorite-checkbox">
           <span class="form-label-title">Is your Favorite</span>

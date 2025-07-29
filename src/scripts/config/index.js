@@ -1,9 +1,9 @@
 import { elements } from "../globalVariables";
-import { localStorageGetItem } from "../utils/localStorage";
+import { localStorageGetItem } from "../utils";
 
-import initElements from "./initElements";
-import initVars from "./initVars";
-import setEvents from "./setEvents";
+import initElements from "./initElements.config";
+import initVars from "./initVars.config";
+import setEvents from "./setEvents.config";
 
 export async function config() {
   initElements();
@@ -17,9 +17,6 @@ export async function config() {
   });
 
   // /pre init pref-language
-  await initVars(
-    `favorite${lang[0].toUpperCase() + lang.split("").splice(1).join("")}Words`,
-    lang
-  );
+  await initVars(`favorite-${lang}-words`, lang);
   setEvents();
 }

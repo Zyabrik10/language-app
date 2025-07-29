@@ -6,7 +6,7 @@ import { Dictionary, ModalWindow } from "../classes";
 // import { parseWords } from "../utils";
 import { vars } from "../globalVariables";
 import { getAllWords } from "../firebase";
-import { localStorageGetItem } from "../utils/localStorage";
+import { localStorageGetItem } from "../utils/localStorage.utils";
 
 // Parsing words
 // const words = {
@@ -30,7 +30,7 @@ export default async function initVars(localStorageName, lang) {
   };
 
   // init favorite words
-  vars.dictionary.setFavorites(true, ...(localStorageGetItem(localStorageName) || []));
+  vars.dictionary.setFavorites(true, ...(localStorageGetItem(localStorageName, []) || []));
 
   // fill vars.elements.dictionary.filters
   vars.dictionary.types.forEach((type, index) => {

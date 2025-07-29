@@ -1,6 +1,6 @@
 import { elements, vars } from "./globalVariables.js";
 
-import { initTrainWords, TrainWords } from "./programs";
+import { initTrainWords, TrainWords } from "./training/index.js";
 import { Filter } from "./components";
 import { renderDictionary } from "./utils";
 
