@@ -9,9 +9,12 @@ export default class ModalWindow {
 
   init() {
     // close modal by clicking on empty space
-    this.mw.addEventListener("click", ({ target, currentTarget }) => {
-      if (target.dataset.role === 'close') this.hideModalWindow();
+    this.mw.addEventListener("mousedown", ({ target, currentTarget }) => {
       if (target === currentTarget) this.hideModalWindow();
+    });
+
+    this.mw.addEventListener("click", ({ target }) => {
+      if (target.dataset.role === 'close') this.hideModalWindow();
     });
 
     this.hideModalWindowOnEscapeEnv = this.hideModalWindowOnEscape.bind(this);
