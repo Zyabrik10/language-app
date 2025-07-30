@@ -4,7 +4,7 @@ import { initTrainWords, TrainWords } from "./training/index.js";
 import { Filter } from "./components";
 import { renderDictionary } from "./utils";
 
-export function main() {  
+export function main() {
   // === rendering filters ===
   elements.dictionary.filters.innerHTML = "";
   elements.trainWords.filtersElement.innerHTML = "";

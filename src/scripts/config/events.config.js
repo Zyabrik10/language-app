@@ -329,7 +329,7 @@ export const addNewWordHandler = asyncWrapper(async (e) => {
     id,
     expression,
     type,
-    typeExpression,
+    type_expression: typeExpression,
     description,
     translation,
     favorite,
